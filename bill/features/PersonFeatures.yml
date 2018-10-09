@@ -1,0 +1,337 @@
+---
+PersonFeatures:
+  BaoTing:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business   
+    - UserSteps | click link daily business
+    - PageSteps_BaoTing | click link baoting
+    - UserSteps | screenshort
+    - PageSteps_BaoTing | set text_field.serial_number value baoting_serial_number
+    - PageSteps_BaoTing | click button.check_serial_number
+    - RecoverSteps | click confirm business prompt with index 0
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    #- UserSteps | screenshort
+    - SettingsSteps | clean test env
+  BaoKai:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_BaoKai | click link baoting
+    - UserSteps | screenshort
+    - PageSteps_BaoKai | set text_field.serial_number value baokai_serial_number
+    - PageSteps_BaoKai | click button.check_serial_number
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    #- UserSteps | screenshort
+    - SettingsSteps | clean test env
+  GuaShi:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_GuaShi | click link guashi
+    - UserSteps | screenshort
+    - PageSteps_GuaShi | set text_field.serial_number value guashi_serial_number
+    - PageSteps_GuaShi | click button.check_serial_number
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    #- UserSteps | screenshort
+    - SettingsSteps | clean test env
+  JuFangTingJi:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_JuFangTingJi | click link jufangtingji
+    - UserSteps | screenshort
+    - PageSteps_JuFangTingJi | set text_field.serial_number value jufangtingji_serial_number
+    - PageSteps_JuFangTingJi | click button.check_serial_number
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    #- UserSteps | screenshort
+    - SettingsSteps | clean test env
+  JuFangKaiJi:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_JuFangKaiJi | click link jufangkaiji
+    - UserSteps | screenshort
+    - PageSteps_JuFangKaiJi | set text_field.serial_number value jufangkaiji_serial_number
+    - PageSteps_JuFangKaiJi | click button.check_serial_number
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    #- UserSteps | screenshort
+    - SettingsSteps | clean test env
+  QinQingHaoMaYeWuBanLi:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - UserSteps | screenshort
+    - PageSteps_QinQingHaoMaYeWuBanLi | click link qinqinghaomayewubanli
+    - PageSteps_QinQingHaoMaYeWuBanLi | set text_field.AUTH_SERIAL_NUMBER value qinqinghaomayewubanli_serial_number_AUTH
+    - PageSteps_QinQingHaoMaYeWuBanLi | click button.check_serial_number
+    - PageSteps_QinQingHaoMaYeWuBanLi | set text_field.FMY_SERIAL_NUMBER value qinqinghaomayewubanli_serial_number_FMY
+    - PageSteps_QinQingHaoMaYeWuBanLi | click i.e_ico-add
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    - UserSteps | screenshort
+    - SettingsSteps | clean test env
+  QinQingHaoMaYeWuShanChu:
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_QinQingHaoMaYeWuBanLi | click link qinqinghaomayewubanli
+    - PageSteps_QinQingHaoMaYeWuBanLi | set text_field.AUTH_SERIAL_NUMBER value qinqinghaomayewubanli_serial_number_AUTH
+    - PageSteps_QinQingHaoMaYeWuBanLi | click button.check_serial_number
+    - PageSteps_QinQingHaoMaYeWuBanLi | set checkbox.viceCheckBox
+    - PageSteps_QinQingHaoMaYeWuBanLi | click i.e_ico-delete
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    - UserSteps | screenshort
+    - SettingsSteps | clean test env
+  ZhangHuZiLiaoBianGeng:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_ZhangHuZiLiaoBianGeng | click link zhanghuziliaobiangeng
+    - PageSteps_ZhangHuZiLiaoBianGeng | set text_field.AUTH_SERIAL_NUMBER value zhanghuziliaobiangeng_serial_number_AUTH
+    - PageSteps_ZhangHuZiLiaoBianGeng | click button.check_serial_number
+    - PageSteps_ZhangHuZiLiaoBianGeng | set text_field.acctinfo_PAY_NAME with zhanghuziliaobiangeng_test_account_name
+    - PageSteps_ZhangHuZiLiaoBianGeng | set text_field.acctinfo_REMARK with zhanghuziliaobiangeng_test_remark
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    - UserSteps | screenshort
+    - SettingsSteps | clean test env
+  YingXiaoHuoDongShouLi_FeiQianYueLei:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link other business
+    - PageSteps_YinXiaoHuoDongShouLi | click link yinxiaohuodongshouli
+    #- UserSteps | screenshort
+    - PageSteps_YinXiaoHuoDongShouLi | set text_field.AUTH_SERIAL_NUMBER value yinxiaohuodongshouli_serial_number_AUTH
+    - PageSteps_YinXiaoHuoDongShouLi | click button.check_serial_number
+    - PageSteps_YinXiaoHuoDongShouLi | select select_list.SALE_CAMPN_TYPE with text_feiqianyuelei
+    - PageSteps_YinXiaoHuoDongShouLi | select select_list.SALE_PRODUCT_ID with text_youxiwanjia
+    - PageSteps_YinXiaoHuoDongShouLi | click li.text_youxiwanjia
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    - UserSteps | screenshort
+    - SettingsSteps | clean test env
+  YeWuFanXiao_FeiQianYueLei:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link special business
+    - PageSteps_YeWuFanXiao | click link yewufanxiao
+    - PageSteps_YeWuFanXiao | set text_field.cond_SERIAL_NUMBER value YeWuFanXiao_FeiQianYueLei_Serial_number
+    - PageSteps_YeWuFanXiao | select select_list.cond_TRADE_TYPE_CODE with text_FeiQianYueLei
+    - PageSteps_YeWuFanXiao | click button.check_serial_number
+    - PageSteps_YeWuFanXiao | set checkbox.e_checkbox
+    - UserSteps | sumbit trade normal
+    - UserSteps | click Alter Accetp
+    - UserSteps | sumbit trade normal
+    - UserSteps | click Alter Accetp
+    - UserSteps | get order_id normal
+    #- UserSteps | check order
+    #- UserSteps | screenshort
+    - SettingsSteps | clean test env
+  KeHuZiLiaoZongHeChaXun:
+    #- SettingsSteps | initialize test env
+    #- SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link query business
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click link kehuziliaozonghechaxun
+    - PageSteps_KeHuZiLiaoZongHeChaXun | set text_field.cond_SERIAL_NUMBER value KeHuZiLiaoZongHeChaXun_Serial_number
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click button.check_serial_number
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_UserInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_CustInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_CustInfoHistory
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_accountInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_productInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_serviceInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_discountInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_platServInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_saleInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_resourceInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_relationInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_tradeHistoryInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_postInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_foregiftInfo
+    #- PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_scoreInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_npUserInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_userWidenetInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_userCreditInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_userShareInfo
+    - PageSteps_KeHuZiLiaoZongHeChaXun | click a with text_userBillLogInfo
+    - SettingsSteps | clean test env
+  KeHuZiLiaoBianGeng:
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_KeHuZiLiaoBianGeng | click link kehuziliaobiangeng
+    - PageSteps_KeHuZiLiaoBianGeng | set text_field.cond_SERIAL_NUMBER value KeHuZiLiaoBianGeng_Serial_number
+    - PageSteps_KeHuZiLiaoBianGeng | click button.check_serial_number
+    - PageSteps_KeHuZiLiaoBianGeng | set text_field.custInfo_REMARK value test
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  KaiHu_QuanQiuTong:
+    - SettingsSteps | initialize test env
+    - SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link creatAcount business
+    - PageSteps_GeRenYongHuKaiHu | click link gerenyonghukaihu
+    - PageSteps_GeRenYongHuKaiHu | set text_field.SERIAL_NUMBER value KaiHu_QuanQiuTong_Serial_number
+    - PageSteps_GeRenYongHuKaiHu | finish CHECKBOX_LIST commit
+    - PageSteps_GeRenYongHuKaiHu | set text_field.SIM_CARD_NO value KaiHu_QuanQiuTong_SIM_CARD_NO
+    - PageSteps_GeRenYongHuKaiHu | select select_list.PSPT_TYPE_CODE with PassPort
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PSPT_ID value KaiHu_QuanQiuTong_PSPT_ID
+    - PageSteps_GeRenYongHuKaiHu | set text_field.CUST_NAME value KaiHu_QuanQiuTong_CUST_NAME
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PSPT_ADDR value KaiHu_QuanQiuTong_PSPT_ADDR
+    - PageSteps_GeRenYongHuKaiHu | select BIRTHDAY is today
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PHONE value KaiHu_QuanQiuTong_PHONE
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PAY_NAME value KaiHu_QuanQiuTong_PAY_NAME
+    - PageSteps_GeRenYongHuKaiHu | select select_list.PAY_MODE_CODE with crash
+    - PageSteps_GeRenYongHuKaiHu | select ACCT_DAY.PAY_MODE_CODE with firstDay
+    - PageSteps_GeRenYongHuKaiHu | click button.PasswdSetBtn
+    - PageSteps_GeRenYongHuKaiHu | set text_field.pass_NEW_PASSWD value KaiHu_QuanQiuTong_Int_PASSWD
+    - PageSteps_GeRenYongHuKaiHu | set text_field.pass_CONFIRM_PASSWD value KaiHu_QuanQiuTong_Int_PASSWD
+    - PageSteps_GeRenYongHuKaiHu | click button.e_button-page-ok
+    - PageSteps_GeRenYongHuKaiHu | select select_list.PRODUCT_TYPE_CODE value QuanQiuTong
+    - PageSteps_GeRenYongHuKaiHu | click button.productSelectBtn
+    - PageSteps_GeRenYongHuKaiHu | in the div.productTree click li.unfold
+    - PageSteps_GeRenYongHuKaiHu | in the div.productTree click li.unfold value 10000000
+    - PageSteps_GeRenYongHuKaiHu | in the div.productTree click a.e_button-page-ok
+    - PageSteps_GeRenYongHuKaiHu | click a.10000092
+    - PageSteps_GeRenYongHuKaiHu | set checkbox.PE_S_22
+    - PageSteps_GeRenYongHuKaiHu | set checkbox.PE_D_859
+    - PageSteps_GeRenYongHuKaiHu | click button.AddChoiceButton
+    - UserSteps | sumbit trade normal
+    - UserSteps | click Alter Accetp
+    - PageSteps_GeRenYongHuKaiHu | click button.wade_msgbox_117_ct
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  KaiHu_FeiXiang58:
+    - SettingsSteps | initialize test env
+    - SettingsSteps | login with test account
+    - UserSteps | click link person business
+    - UserSteps | click link creatAcount business
+    - PageSteps_GeRenYongHuKaiHu | click link gerenyonghukaihu
+    - PageSteps_GeRenYongHuKaiHu | set text_field.SERIAL_NUMBER value KaiHu_QuanQiuTong_Serial_number
+    - PageSteps_GeRenYongHuKaiHu | finish CHECKBOX_LIST commit
+    - PageSteps_GeRenYongHuKaiHu | set text_field.SIM_CARD_NO value KaiHu_QuanQiuTong_SIM_CARD_NO
+    - UserSteps | click Alter Dismiss
+    - PageSteps_GeRenYongHuKaiHu | select select_list.PSPT_TYPE_CODE with PassPort
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PSPT_ID value KaiHu_QuanQiuTong_PSPT_ID
+    - PageSteps_GeRenYongHuKaiHu | set text_field.CUST_NAME value KaiHu_QuanQiuTong_CUST_NAME
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PSPT_ADDR value KaiHu_QuanQiuTong_PSPT_ADDR
+    - PageSteps_GeRenYongHuKaiHu | select BIRTHDAY is today
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PHONE value KaiHu_QuanQiuTong_PHONE
+    - PageSteps_GeRenYongHuKaiHu | set text_field.PAY_NAME value KaiHu_QuanQiuTong_PAY_NAME
+    - PageSteps_GeRenYongHuKaiHu | select select_list.PAY_MODE_CODE with crash
+    - PageSteps_GeRenYongHuKaiHu | select ACCT_DAY.PAY_MODE_CODE with firstDay
+    - PageSteps_GeRenYongHuKaiHu | click button.PasswdSetBtn
+    - PageSteps_GeRenYongHuKaiHu | set text_field.pass_NEW_PASSWD value KaiHu_QuanQiuTong_Int_PASSWD
+    - PageSteps_GeRenYongHuKaiHu | set text_field.pass_CONFIRM_PASSWD value KaiHu_QuanQiuTong_Int_PASSWD
+    - PageSteps_GeRenYongHuKaiHu | click button.e_button-page-ok
+    - PageSteps_GeRenYongHuKaiHu | select select_list.PRODUCT_TYPE_CODE value QuanQiuTong
+    - PageSteps_GeRenYongHuKaiHu | click button.productSelectBtn
+    - PageSteps_GeRenYongHuKaiHu | in the div.productTree click li.unfold
+    - PageSteps_GeRenYongHuKaiHu | in the div.productTree click li.text with FeiXiang58
+    - PageSteps_GeRenYongHuKaiHu | in the div.productTree click a.e_button-page-ok
+    - UserSteps | sumbit trade normal
+    - UserSteps | click Alter Accetp
+    - PageSteps_GeRenYongHuKaiHu | click button.wade_msgbox_102_ct
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  ChanPinBianGeng_DingGouLaiDianXianShi:
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_ChanPinBianGeng | click link ChanPinBianGeng
+    - PageSteps_ChanPinBianGeng | set text_field.serial_number value ChanPinBianGeng_DingGouLaiDianXianShi_serial_number
+    - PageSteps_ChanPinBianGeng | click button.check_serial_number
+    - PageSteps_ChanPinBianGeng | select div.packageList where title like servicePackage
+    - PageSteps_ChanPinBianGeng | set checkbox.PE_S_23
+    - PageSteps_ChanPinBianGeng | click button.AddChoiceButton
+    - UserSteps | sumbit trade normal
+    - PageSteps_ChanPinBianGeng | click button.wade_msgbox_59_btns
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  ChanPinBianGeng_TuiDingLaiDianXianShi:
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_ChanPinBianGeng | click link ChanPinBianGeng
+    - PageSteps_ChanPinBianGeng | set text_field.serial_number value ChanPinBianGeng_DingGouLaiDianXianShi_serial_number
+    - PageSteps_ChanPinBianGeng | click button.check_serial_number
+    - PageSteps_ChanPinBianGeng | click checkbox.PE_S_23
+    - UserSteps | sumbit trade normal
+    - PageSteps_ChanPinBianGeng | click button.wade_msgbox_59_btns
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  ChanPinBianGeng_DingGouIPChangLiao:
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_ChanPinBianGeng | click link ChanPinBianGeng
+    - PageSteps_ChanPinBianGeng | set text_field.serial_number value ChanPinBianGeng_DingGouLaiDianXianShi_serial_number
+    - PageSteps_ChanPinBianGeng | click button.check_serial_number
+    - PageSteps_ChanPinBianGeng | select div.packageList where title like discntPackage
+    - PageSteps_ChanPinBianGeng | set checkbox.PE_D_860
+    - PageSteps_ChanPinBianGeng | click button.AddChoiceButton
+    - UserSteps | sumbit trade normal
+    - PageSteps_ChanPinBianGeng | click button.wade_msgbox_59_btns
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  ChanPinBianGeng_TuiDingIPChangLiao:
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_ChanPinBianGeng | click link ChanPinBianGeng
+    - PageSteps_ChanPinBianGeng | set text_field.serial_number value ChanPinBianGeng_DingGouLaiDianXianShi_serial_number
+    - PageSteps_ChanPinBianGeng | click button.check_serial_number
+    - PageSteps_ChanPinBianGeng | click checkbox.PE_D_860
+    - UserSteps | sumbit trade normal
+    - PageSteps_ChanPinBianGeng | click button.wade_msgbox_59_btns
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  GPRS_YouHuiBianGeng:
+    - UserSteps | click link person business
+    - UserSteps | click link daily business
+    - PageSteps_GPRS_YouHuiBianGeng | click link GPRS_YouHuiBianGeng
+    - PageSteps_GPRS_YouHuiBianGeng | set text_field.serial_number value GPRS_YouHuiBianGeng _serial_number
+    - PageSteps_GPRS_YouHuiBianGeng | click button.check_serial_number
+    - PageSteps_GPRS_YouHuiBianGeng | change GPRS discnt
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  KaiHu_FeiXiang51:
+    - PageSteps_GeRenYongHuKaiHu | record Bill channel
+
+
+
+
+    
+
+
+
+

@@ -1,0 +1,14 @@
+# Logfile created on 2018-05-17 15:46:42 +0800 by logger.rb/61378
+[2018-05-17 15:46:42] INFO: [32mLogs directory: D:/WorkSpace/AutoTester/results/2018-05-17_154642[0m
+[2018-05-17 15:46:42] INFO: [32mResults directory: D:/WorkSpace/AutoTester/results/2018-05-17_154642[0m
+[2018-05-17 15:46:42] INFO: [32mScreenshots directory: D:/WorkSpace/AutoTester/results/2018-05-17_154642/screenshots[0m
+[2018-05-17 15:46:42] INFO: [32mErrors directory: D:/WorkSpace/AutoTester/results/2018-05-17_154642/errors[0m
+[2018-05-17 15:46:42] INFO: [35mload testcase yaml file: D:/WorkSpace/AutoTester\web\testcases\2017-04-27_145753.yml[0m
+[2018-05-17 15:46:42] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_BaoKai.yml[0m
+[2018-05-17 15:46:42] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_BaoTing.yml[0m
+[2018-05-17 15:46:42] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_ChanPinBianGeng.yml[0m
+[2018-05-17 15:46:42] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_CompanyGuest.yml[0m
+[2018-05-17 15:46:42] ERROR: [31m(D:/WorkSpace/AutoTester/web/steps/PageSteps_CompanyGuest.yml): did not find expected key while parsing a block mapping at line 52 column 5[0m
+[2018-05-17 15:46:42] INFO: [33m
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m

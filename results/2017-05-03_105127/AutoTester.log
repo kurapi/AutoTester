@@ -1,0 +1,57 @@
+# Logfile created on 2017-05-03 10:51:27 +0800 by logger.rb/56438
+[2017-05-03 10:51:27] INFO: [32mLogs directory: C:/workSpace/yt/AutoTester/results/2017-05-03_105127[0m
+[2017-05-03 10:51:27] INFO: [32mResults directory: C:/workSpace/yt/AutoTester/results/2017-05-03_105127[0m
+[2017-05-03 10:51:27] INFO: [32mScreenshots directory: C:/workSpace/yt/AutoTester/results/2017-05-03_105127/screenshots[0m
+[2017-05-03 10:51:27] INFO: [32mErrors directory: C:/workSpace/yt/AutoTester/results/2017-05-03_105127/errors[0m
+[2017-05-03 10:51:27] INFO: [35mload testcase yaml file: C:/workSpace/yt/AutoTester\web\testcases\2017-04-27_145753.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_BaoKai.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_BaoTing.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_ChanPinBianGeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_CunQuKuanRiZhiChaXun.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_GeRenXianJinFaPiaoDaYin.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_GeRenYongHuKaiHu.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_GPRS_YouHuiBianGeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_GuaShi.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_HuaFeiFanXiao.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_HuaFeiShouQu_TangTanZhuanYong.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiaoFeiShouFeiChaXun.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChanPinChengYuanXinZeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChanPinChengYuanZhuXiao.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChanPinXinZeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChanPinZhuXiao.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChanPinZiLiaoXiuGai.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanKeHuShouFeiFanXiao.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanKeHuShouFei_YinGaiZeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanXianJinFaPiaoDaYin.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JiTuanZhangHuGuanLi.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JuFangKaiJi.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_JuFangTingJi.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_KeHuZiLiaoBianGeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_KeHuZiLiaoZongHeChaXun.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_MuVPMNWaiWangHaoMaXinZeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_MuVPMNWaiWangHaoMaZhuXiao.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_PuTongJiDaFaPiaoZuoFei.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_QinQingHaoMaYeWuBanLi.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_XiangDanChaXun.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_XinBanYongHuZhangDanDaYin.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_YeWuFanXiao.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_YinXiaoHuoDongShouLi.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_YongHuTaoCanShiYongLiangChaXun.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_ZhangHuZiLiaoBianGeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_ZiVPMNJiTuanXinZeng.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/PageSteps_ZiVPMNJiTuanZhuXiao.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/RecoverSteps.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/SettingsSteps.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload steps yaml file: C:/workSpace/yt/AutoTester/web/steps/UserSteps.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload features yaml file: C:/workSpace/yt/AutoTester/web/features/AccountFeatures.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload features yaml file: C:/workSpace/yt/AutoTester/web/features/GroupFeatures.yml[0m
+[2017-05-03 10:51:27] INFO: [36mload features yaml file: C:/workSpace/yt/AutoTester/web/features/PersonFeatures.yml[0m
+[2017-05-03 10:51:27] INFO: testcase_hash: {"testcase_name"=>"2017-04-27_145753", "features_suite"=>[{"feature_name_desc"=>" \u96C6\u56E2\u8D26\u6237\u65B0\u589E", "features_suite_name"=>"GroupFeatures", "feature_name"=>"JiTuanZhangHuXinZeng", "feature_steps"=>[{"control_script"=>"@naboss_page.link(:text,\"\u96C6\u56E2\u4E1A\u52A1\").click", "step_desc"=>"click link group business"}, {"control_script"=>"@naboss_page.link(:id,\"crm8180\").click", "step_desc"=>"click link JiTuanZhangHuGuanLi"}, {"control_script"=>" @naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,\"GROUP_ID_NAME\").set config.TestEnvParam.JiTuanZhangHuXinZeng.GROUP_ID; @naboss_page.send_keys :enter; ", "control_data"=>"config.TestEnvParam.JiTuanZhangHuXinZeng.GROUP_ID", "step_desc"=>"set text_field.GROUP_ID_NAME value JiTuanZhangHuXinZeng_GROUP_ID"}, {"control_script"=>"@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,\"bcreateTop\").click", "step_desc"=>"click button.bcreateTop"}, {"control_script"=>"@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,\"bcreate\").click", "step_desc"=>"click button.bcreate"}, {"control_script"=>"clickTradeSubmit(@naboss_page)", "step_desc"=>"sumbit trade normal"}, {"control_script"=>" Watir::Wait.until {@naboss_page.div(:id,\"main_ct\").iframe(:id => /navframe/, :index => 1).div(:id,\"SUBMIT_MSG_PANEL\")}; @orderStr=@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,\"SUBMIT_MSG_PANEL\").div(:class,\"c_popupWrapper\").div(:class,\"c_popupBox\").div(:class,\"c_popupContent\").div(:class,\"c_popupContentWrapper\").div(:class,\"c_msg c_msg-popup c_msg-success\").div(:class,\"content\").text; step[\"step_print\"]=@orderStr; @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,\"SUBMIT_MSG_PANEL\").button.click ", "expectation"=>"@orderStr!=nil", "step_desc"=>"get order_id normal"}, {"control_script"=>"@order_id=check_order;puts @order_id", "expectation"=>"@result==\"9\"", "step_desc"=>"check order"}, {"control_script"=>" writeConfig \"config.TestEnvParam.JiTuanZhangHuXinZeng.ACCT_ID\",(select_acctId_from_orderID @order_id); ", "control_data"=>"config.TestEnvParam.JiTuanZhangHuXinZeng.ACCT_ID", "step_desc"=>"record JiTuanZhangHuXinZeng_acctID"}, {"control_script"=>"@naboss_page.li(:id,'closeAllTab').click;clickAlterAccetp(@naboss_page)", "step_desc"=>"clean test env"}]}]}
+[2017-05-03 10:51:27] INFO: [33m======= start to run test testcase: 2017-04-27_145753 =======[0m
+[2017-05-03 10:51:36] ERROR: [31mbrowser window was closed[0m
+[2017-05-03 10:51:36] INFO: [33m
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m

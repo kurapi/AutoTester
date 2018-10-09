@@ -1,0 +1,5 @@
+---
+2017-04-27_145753:
+- VIPROOMFeatures | add companyGuest | 公司宾客新增
+- VIPROOMFeatures | update companyGuest | 公司宾客修改
+- VIPROOMFeatures | delete companyGuest | 公司宾客删除

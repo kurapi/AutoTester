@@ -1,0 +1,19 @@
+PageSteps_JiTuanChanPinZhuXiao:
+  click link JiTuanChanPinZhuXiao:
+    control_script: '@naboss_page.link(:id,"crm8240").click'
+
+  set text_field.cond_GROUP_SERIAL_NUMBER value JiTuanChanPinFuFeiGuanXiXiuGai_SerialNumber and send enterKey:
+    control_script: '
+      @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").text_field(:id,"cond_GROUP_SERIAL_NUMBER").set config.TestEnvParam.JiTuanChengYuanFuFeiGuanXiBianGeng.CaiLing.SerialNumber;
+      @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanChengYuanFuFeiGuanXiBianGeng.CaiLing.SerialNumber
+
+  click button.bnext:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:id,"bnext").click'
+
+  select select_list.param_REMOVE_REASON value badService:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"Preview").select_list(:id,"param_REMOVE_REASON").select "服务不好"'
+
+  set text_field.param_REMARK value test:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"Preview").text_field(:id,"param_REMARK").set "test"'

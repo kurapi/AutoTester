@@ -1,0 +1,34 @@
+PageSteps_JiTuanKeHuShouFei_YinGaiZeng:
+  click link JiTuanKeHuShouFei_YinGaiZeng:
+    control_script: '@naboss_page.link(:id,"BIL2000").click'
+
+  set text_field.cond_GROUP_ID value with JiTuanKeHuShouFei_YinGaiZeng.serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_GROUP_ID").set config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.GroupId'
+    control_data: config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.GroupId
+
+  click button.queryButt:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"queryButt").click'
+
+  set checkbox where text like JiTuanKeHuShouFei_YinGaiZeng.acct_id And collect 10 yuan:
+    control_script: '
+      Watir::Wait.until {@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"productTable").[](1).[](1).exist?};
+      @a=@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"productTable");
+      for @i in 1..60 do
+      puts config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id;
+    	if (@a.[](@i).[](10).text == (config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id).to_s) then
+    	  break;
+       else
+          if @i==60 then
+    		  config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id.should ==0;
+            puts "提供账户编码"+config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id+"在表记录中不存在";
+          end;
+    	end;
+      end;
+      @a.[](@i).[](0).checkbox.set;
+      @a.[](@i).text_field(:id,"realFee").click;
+      @a.[](@i).text_field(:id,"realFee").send_keys("10");
+    '
+    data: config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id
+
+  click button.submitButt:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"submitButt").click'

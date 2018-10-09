@@ -1,0 +1,26 @@
+---
+PageSteps_ZhangHuZiLiaoBianGeng:
+  #点击账户资料变更菜单按钮
+  click link zhanghuziliaobiangeng:
+    control_script: '@naboss_page.link(:id,"crm9214").click'
+
+  #在账户资料变更页面的服务号码文本框输入服务号码
+  set text_field.AUTH_SERIAL_NUMBER value zhanghuziliaobiangeng_serial_number_AUTH:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"AUTH_SERIAL_NUMBER").set config.TestEnvParam.ZhangHuZiLiaoBianGeng.SerialNumberAUTH'
+    data: config.TestEnvParam.ZhangHuZiLiaoBianGeng.SerialNumberAUTH
+
+  #在账户资料变更页面点击查询按钮
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AUTH_SUBMIT_BTN").click'
+
+  #在账户资料变更页面填写测试账户名称
+  set text_field.acctinfo_PAY_NAME with zhanghuziliaobiangeng_test_account_name:
+    control_script: '@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).text_field(:id,"acctinfo_PAY_NAME").set config.TestEnvParam.ZhangHuZiLiaoBianGeng.TestAccountName'
+
+  #在账户资料变更页面填写备注
+  set text_field.acctinfo_REMARK with zhanghuziliaobiangeng_test_remark:
+    control_script: '@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).text_field(:id,"acctinfo_PAY_NAME").set config.TestEnvParam.ZhangHuZiLiaoBianGeng.Remark'
+
+
+
+

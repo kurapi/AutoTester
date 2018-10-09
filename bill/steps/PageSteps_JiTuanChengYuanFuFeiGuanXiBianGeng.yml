@@ -1,0 +1,27 @@
+PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng:
+  click link JiTuanChengYuanFuFeiGuanXiBianGeng:
+    control_script: '@naboss_page.link(:id,"crm8270").click'
+
+  set text_field.editBaseDatum value JiTuanChengYuanFuFeiGuanXiBianGeng_CaiLing_SerialNumber:
+    control_script: '
+      @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.JiTuanChengYuanFuFeiGuanXiBianGeng.CaiLing.SerialNumber;
+      @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanChengYuanFuFeiGuanXiBianGeng.CaiLing.SerialNumber
+
+  click table.value with JiTuanChanPinXinZeng_CaiLing_productID:
+    control_script: '
+      a=(@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").div(:class,"c_scroll c_scroll-x c_scroll-table-10").table);
+      Watir::Wait.until{a.exist?};
+      for i in 0..10
+          if a.[](i).[](4).text == (config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.SerialNumber).to_s then
+              break;
+          end
+      end;
+      a.[](i).[](3).click;
+    '
+  select select_list.PAY_PLAN_SEL_PLAN_TYPE value with group:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editGroupAccountInfo").select_list(:id,"PAY_PLAN_SEL_PLAN_TYPE").select("集团付")'
+
+  click button.bnext:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:id,"bnext").click'

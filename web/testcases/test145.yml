@@ -1,0 +1,15 @@
+---
+test145:
+  - PersonFeatures | QinQingHaoMaYeWuBanLi | 亲情号码业务办理
+  - PersonFeatures | QinQingHaoMaYeWuShanChu | 亲情号码业务删除
+  - PersonFeatures | YingXiaoHuoDongShouLi_FeiQianYueLei | 营销活动受理_非签约类
+  - PersonFeatures | YeWuFanXiao_FeiQianYueLei | 营销活动返销_非签约类
+  - PersonFeatures | ZhangHuZiLiaoBianGeng | 账户资料变更
+  - PersonFeatures | KeHuZiLiaoZongHeChaXun | 客户资料综合查询
+  - PersonFeatures | KeHuZiLiaoBianGeng | 客户资料变更
+  - PersonFeatures | JuFangTingJi | 局方停机
+  - PersonFeatures | JuFangKaiJi | 局方开机
+  - PersonFeatures | BaoTing | 报停
+  - PersonFeatures | BaoKai | 报开
+  - PersonFeatures | GuaShi | 挂失
+  - PersonFeatures | BaoKai | 报开

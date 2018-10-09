@@ -1,0 +1,34 @@
+PageSteps_GeRenXianJinFaPiaoDaYin:
+  #点击个人现金发票打印菜单按钮
+  click link GeRenXianJinFaPiaoDaYin:
+    control_script: '@naboss_page.link(:id,"BIL2103").click'
+
+  set text_field.serial_number value GeRenXianJinFaPiaoDaYin_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.GeRenXianJinFaPiaoDaYin.SerialNumber'
+    data: config.TestEnvParam.GeRenXianJinFaPiaoDaYin.SerialNumber
+
+  select select_list.cond_START_MONTH value with GeRenXianJinFaPiaoDaYin_print_day:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"cond_START_MONTH").select (config.TestEnvParam.GeRenXianJinFaPiaoDaYin.print_day).to_s'
+    data: config.TestEnvParam.GeRenXianJinFaPiaoDaYin.print_day
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+
+  set checkbox.T_Table.1.0:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"T_Table").[](1).[](0).checkbox.set'
+
+  set text_field.cond_REMARK value with test:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_REMARK").set "test"'
+
+  click button.beforePrint:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"beforePrint").click'
+
+  set text_field._EnterPass_USER_PASS value with GeRenXianJinFaPiaoDaYin_Password:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"_EnterPass_USER_PASS").set config.TestEnvParam.GeRenXianJinFaPiaoDaYin.Password'
+    data: config.TestEnvParam.GeRenXianJinFaPiaoDaYin.Password
+
+  click button.OK:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"OK").click'
+
+  click button.DianZiFaPiaoDaYin:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id => /wade_popup_framenotechecker/).button(:text,"电子发票打印").click'

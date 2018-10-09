@@ -1,0 +1,178 @@
+---
+PageSteps_KeHuZiLiaoZongHeChaXun:
+  #点击客户资料综合查询菜单按钮
+  click link kehuziliaozonghechaxun:
+    control_script: '@naboss_page.link(:id,"crm9911").click'
+    control_recover: '@naboss_page.link(:id,"crm9911").click'
+
+  #在客户资料综合查询页面的服务号码文本框输入服务号码
+  set text_field.cond_SERIAL_NUMBER value KeHuZiLiaoZongHeChaXun_Serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"SERIAL_NUMBER").set config.TestEnvParam.KeHuZiLiaoZongHeChaXun.SerialNumber'
+    control_data: config.TestEnvParam.KeHuZiLiaoZongHeChaXun.SerialNumber
+
+  #在客户资料综合查询页面点击查询按钮
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"QUERY_BTN").click'
+
+  click a with text_UserInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户基本信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户基本信息").click
+    '
+    expectation: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"客户信息").click'
+
+  click a with text_CustInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"客户信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"客户信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"newCustInfoPage").div(:class,/c_form/).exist?}'
+
+  click a with text_CustInfoHistory:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"客户历史日志").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"客户历史日志").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"accountInfoPage1").div(:class,/c_scroll/).exist?}'
+
+  click a with text_accountInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"账户信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"账户信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"accountInfoPage").div(:class,/c_table/).exist?}'
+
+  click a with text_productInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"产品信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"产品信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"productInfoPage").div(:class,/c_scroll/).exist?}'
+
+  click a with text_serviceInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"服务信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"服务信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"serviceInfoPage").div(:id,/QueryListPart/).exist?}'
+
+  click a with text_discountInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"优惠信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"优惠信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"discountInfoPage").div(:class,/c_scroll/).exist?}'
+
+  click a with text_platServInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"平台业务信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"平台业务信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"platServInfoPage").div(:class,/c_scroll/).exist?}'
+
+  click a with text_saleInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"营销活动信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"营销活动信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"saleInfoPage").div(:class,/c_scroll/).exist?}'
+
+  click a with text_resourceInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"资源信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"资源信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"resourceInfoPage").div(:class,/c_table/).exist?}'
+
+  click a with text_relationInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户关系信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户关系信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"relationInfoPage").div(:class,/c_table/).exist?}'
+
+  click a with text_tradeHistoryInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"业务历史信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"业务历史信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"tradeHistoryInfoPage").div(:id,/QueryListPart/).exist?}'
+
+  click a with text_postInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"邮寄信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"邮寄信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"postInfoPage").div(:class,/c_table/).exist?}'
+
+  click a with text_foregiftInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"押金信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"押金信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"foregiftInfoPage").div(:class,/c_table/).exist?}'
+
+  click a with text_scoreInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"积分信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"积分信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"scoreInfoPage").div(:class,/c_scroll/).exist?}'
+
+  click a with text_npUserInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"携号转网用户信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"携号转网用户信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"npUserInfoPage").div(:class,/c_form/).exist?}'
+
+  click a with text_userWidenetInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"宽带业务").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"宽带业务").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"userWidenetInfoPage").div(:class,/c_form/).exist?}'
+
+  click a with text_userCreditInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户信用等级").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户信用等级").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"userCreditInfoPage").div(:class,/c_form/).exist?}'
+
+  click a with text_userShareInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户共享信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"用户共享信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"userShareInfoPage").div(:class,/c_table/).exist?}'
+
+  click a with text_userBillLogInfo:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"清单信息").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).a(:text,"清单信息").click;
+    '
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"userBillLogInfoPage").div(:class,/c_scroll/).exist?}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

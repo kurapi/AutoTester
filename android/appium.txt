@@ -1,0 +1,14 @@
+[caps]
+platformName = "android"
+deviceName = "iPhone 6s"
+platformVersion = "9.3"
+autoAcceptAlerts = 'true'
+
+[appium_lib]
+require = ["../lib/requires.rb"]
+
+[simulators]
+android_devices = [
+  ['iPhone 4s', '8.4'],
+  ['iPhone 6s', '9.3'],
+]

@@ -1,0 +1,252 @@
+---
+TestEnvParam:
+  URL: http://10.200.130.83:8080/
+  UserName: SUPERUSR
+  Password: lc
+  Description: 环境参数
+  SMSFreeRes:
+    testName: 清单级优惠_短信_存在相应的免费资源
+    testId: SMSFreeRes
+    free_code1: 0/1
+    redisStrs: 11000 0 0 0
+    bakFile: 1 3 21,2,09151643251388857616501790418890,0,790418890,00,0,,460026067495459,18308902369,0,18288914531,,901901,10658038,,,,0,1,136,0898,0898,,,13800871500,,20170505,095258,20170505,095258,,1,000,,,,0,189,3,1,,0926105138,1,0T,1,1,01,1005,1,139,,0,1112031621744571,1112031607670045,71006601,G003,898,898,,7,71006015,G003,0,20111218103610,0898,0898,,,,,,,,,,,,,,,,,,,1112031607670045
+    Description: 清单级优惠_短信_存在相应的免费资源
+    hostInfo:
+      linuxIpAccount: billing
+      linuxIpAddr: 10.200.130.103
+      passWord: Bos@2015
+      bDS_Adr: http://127.0.0.1:8106
+      inputDirPath: "/ngboss/billing/data/sender/3001"
+      Description: 主机参数
+    userInfo:
+      user_id: 1112031621744571
+      serial_number: 18308902369
+      acct_id: 1112031607670045
+      senderChannle: 3001
+      sqlDbStr: ucr_td01/ucr_td01@nbbil
+      channel: 3
+      feepolicyId: 1213031698368409
+      resCode: 200164
+      Description: 用户参数
+    userInfo2:
+      senderChannle: 3001
+      channel: 3
+    userInfo1:
+      user_id: 1112031621744571
+      serial_number: 18308902369
+      acct_id: 1112031607670045
+      senderChannle: 3001
+      sqlDbStr: ucr_td01/ucr_td01@nbbil
+      channel: 3
+      feepolicyId: 1213031698368409
+      resCode: 200164
+      Description: 用户参数
+  billACTDataBase:
+    Account: ucr_act1
+    Password: ucr_act1
+    DataBase: nbact
+    bakFile: 1 3 21,2,09151643251388857616501790418890,0,790418890,00,0,,460026067495459,18308902369,0,18288914531,,901901,10658038,,,,0,1,136,0898,0898,,,13800871500,,20170505,095258,20170505,095258,,1,000,,,,0,189,3,1,,0926105138,1,0T,1,1,01,1005,1,139,,0,1112031621744571,1112031607670045,71006601,G003,898,898,,7,71006015,G003,0,20111218103610,0898,0898,,,,,,,,,,,,,,,,,,,1112031607670045
+    Description: 帐管数据库参数
+  nbbilDataBase:
+    Account: ucr_td01
+    Password: ucr_td01
+    DataBase: nbbil
+    Description: 话单数据库参数
+  CRMDataBase:
+    Account: UOP_CRM1
+    Password: UOP_CRM1J2
+    DataBase: j2ee_crmtest
+    Description: CRM数据库参数
+  BaoTing:
+    SerialNumber: 13036087023
+    Description: 报停
+  BaoKai:
+    SerialNumber: 13036087023
+    Description: 报开
+  GuaShi:
+    SerialNumber: 13036087023
+    Description: 挂失
+  JuFangTingJi:
+    SerialNumber: 13036087023
+    Description: 局方停机
+  JuFangKaiJi:
+    SerialNumber: 13036087023
+    Description: 局方开机
+  QinQingHaoMaYeWuBanLi:
+    SerialNumberAUTH: 13876525082
+    SerialNumberFMY: 13036087023
+    Description: 亲情号码业务办理
+  ZhangHuZiLiaoBianGeng:
+    TestAccountName: 杨腾
+    Remark: 测试
+    SerialNumberAUTH: 13876525082
+    Description: 账户资料变更
+  YinXiaoHuoDongShouLi:
+    SerialNumberAUTH: 13876525082
+    Description: 营销活动受理
+  YeWuFanXiao:
+    Description: 业务返销
+    YeWuFanXiao_FeiQianYueLei:
+      Serial_number: 13876525082
+      Description: 营销活动业务返销
+  KeHuZiLiaoZongHeChaXun:
+    SerialNumber: 13876525082
+    Description: 客户资料综合查询
+  KeHuZiLiaoBianGeng:
+    SerialNumber: 13876525082
+    Description: 客户资料变更
+  HuaFeiShouQu_TangTanZhuanYong:
+    SerialNumber: 18289645400
+    Description: 话费收取探测专用
+  GeRenXianJinFaPiaoDaYin:
+    SerialNumber: 13876525082
+    Password: 123412
+    print_day: 201701
+    Description: 个人现金发票打印
+  HuaFeiFanXiao:
+    SerialNumber: 18289645400
+    Description: 话费返销
+  JiTuanKeHuShouFei_YinGaiZeng:
+    GroupId: 8989859425
+    Acct_id: 1115102705809820
+    SerialNumber: '09955227323'
+    Description: 集团客户收费（营改增）
+  JiTuanXianJinFaPiaoDaYin:
+    GroupId: 8989859425
+    Acct_id: 1115102705809820
+    SerialNumber: '09955227323'
+    print_day: 201701
+    Description: 集团现金发票打印
+  JiTuanPuTongFaPiaoZuoFei:
+    SerialNumber: '09955227323'
+    Description: 集团普通发票作废
+  JiaoFeiShouFeiChaXun:
+    SerialNumber: 18289645400
+    Description: 缴费收费查询
+  YongHuTaoCanShiYongLiangChaXun:
+    SerialNumber: 18289645400
+    Description: 用户套餐使用量查询
+  XinBanYongHuZhangDanDaYin:
+    SerialNumber: 18289645400
+    Description: 新版用户帐单打印
+  XiangDanChaXun:
+    SerialNumber: 18289645400
+    Password: 123412
+    Description: 详单查询
+  GeRenYongHuKaiHu:
+    Description: 个人用户开户
+    KaiHu_QuanQiuTong:
+      Description: 全球通开户
+      SerialNumber: 18889101305
+      SIM_CARD_NO: 898600B8211490529908
+      PSPT_ID: 827173172
+      CUST_NAME: cesd
+      PSPT_ADDR: 测试地址测试地址
+      PHONE: 18889745933
+      PAY_NAME: 杨腾
+      Int_PASSWD: 123412
+  ChanPinBianGeng:
+    Description: 产品变更
+    DingGouLaiDianXianShi:
+      SerialNumber: 13976764030
+      Description: 订购来电显示
+  GPRS_YouHuiBianGeng:
+    SerialNumber: 13976764030
+    Description: GPRS优惠变更
+  JiTuanZhangHuXinZeng:
+    GROUP_ID: 8989859425
+    ACCT_ID: 1117050206260821
+  JiTuanChanPinXinZeng:
+    Description: 集团产品新增
+    CaiLing:
+      Description: 集团彩铃
+      GROUP_ID: 8989859425
+      CONTRACT_ID: 2017040100093608|合同测试
+      MANAGER_NAME: 杨腾
+      MANAGER_PHONE: 18889745933
+      MANAGER_INFO: test
+      PASSWORD: 123412
+      SerialNumber: '09955178265'
+  JiTuanChanPinChengYuanXinZeng:
+    Description: 集团产品成员新增
+    SerialNumber: 13976764030
+  JiTuanChanPinChengYuanZiLiaoXiuGai:
+    Description: 集团产品成员资料修改
+    CaiLing:
+      SerialNumber: 13976764030
+  JiTuanChengYuanFuFeiGuanXiBianGeng:
+    Description: 集团成员付费关系修改
+    CaiLing:
+      SerialNumber: 13976764030
+  ZiVPMNJiTuanXinZeng:
+    Description: 子VPMN集团新增
+    cond_SERIAL_NUMBER: 1
+    SUB_SerialNumber: 1
+  ZiVPMNJiTuanZhuXiao:
+    Description: 子VPMN集团注销
+    cond_SERIAL_NUMBER: 1
+  MuVPMNWaiWangHaoMaXinZeng:
+    Description: 母VPMN网外号码新增
+    cond_SERIAL_NUMBER: 1
+    SUB_SerialNumber: 1
+  senderChannle:
+    3029: 225~228,229~232
+    3030: 233~236,237~240
+    3031: 241~244,245~248
+    3032: 249~252,253~256
+    3033: 257~260,261~264
+    3034: 265~268,269~272
+    3035: 273~276,277~280
+    3036: 281~284,285~288
+    3037: 289~292,293~296
+    3038: 297~300,301~304
+    3039: 305~308,309~312
+    3040: 313~316,317~320
+    3041: 321~324,325~328
+    3042: 329~332,333~336
+    3043: 337~340,341~344
+    3044: 345~348,349~352
+    3045: 353~356,357~360
+    3046: 361~364,365~368
+    3047: 369~372,373~376
+    3048: 377~380,381~384
+    3001: 1~4,5~8
+    3009: 65~68,69~72
+    3010: 73~76,77~80
+    3011: 81~84,85~88
+    3012: 89~92,93~96
+    3013: 97~100,101~104
+    3014: 105~108,109~112
+    3015: 113~116,117~120
+    3016: 121~124,125~128
+    3051: 401~404,405~408
+    3052: 409~412,413~416
+    3053: 417~420,421~424
+    3023: 177~180,181~184
+    3024: 185~188,189~192
+    3025: 193~196,197~200
+    3026: 201~204,205~208
+    3027: 209~212,213~216
+    3028: 217~220,221~224
+    3017: 129~132,133~136
+    3018: 137~140,141~144
+    3019: 145~148,149~152
+    3020: 153~156,157~160
+    3021: 161~164,165~168
+    3022: 169~172,173~176
+    3002: 9~12,13~16
+    3003: 17~20,21~24
+    3004: 25~28,29~32
+    3005: 33~36,37~40
+    3006: 41~44,45~48
+    3007: 49~52,53~56
+    3008: 57~60,61~64
+    3054: 425~428,429~432
+    3055: 433~436,437~440
+    3056: 441~444,445~448
+    3057: 449~452,453~456
+    3058: 457~460,461~464
+    3059: 465~468,469~472
+    3060: 473~476,477~480
+    3049: 385~388,389~392
+    3050: 393~396,397~400

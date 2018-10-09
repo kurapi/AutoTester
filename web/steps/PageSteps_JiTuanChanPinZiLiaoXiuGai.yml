@@ -1,0 +1,21 @@
+PageSteps_JiTuanChanPinZiLiaoXiuGai:
+  click link JiTuanChanPinZiLiaoXiuGai:
+    control_script: '@naboss_page.link(:id,"crm8220").click'
+
+  set text_field.editBaseDatum value JiTuanChengYuanFuFeiGuanXiBianGeng_CaiLing_SerialNumber:
+    control_script: '
+      @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").text_field(:id,"cond_GROUP_SERIAL_NUMBER").set config.TestEnvParam.JiTuanChengYuanFuFeiGuanXiBianGeng.CaiLing.SerialNumber;
+      @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanChengYuanFuFeiGuanXiBianGeng.CaiLing.SerialNumber
+
+  click button.bupdateCont to check contract frame:
+    control_script: '
+	@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").button(:id,"bupdateCont").click;
+	Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").button(:id,"bupdateCont").exist?};
+	@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,/wade_popup_frameaddbyframework/).button(:id,"button22").click;
+    '
+
+  click button.bnext:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:id,"bnext").click'
+

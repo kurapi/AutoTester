@@ -1,0 +1,41 @@
+PageSteps_JiTuanXianJinFaPiaoDaYin:
+  click link JiTuanXianJinFaPiaoDaYin:
+    control_script: '@naboss_page.link(:id,"BIL2101").click'
+
+  set text_field.serial_number value JiTuanXianJinFaPiaoDaYin_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.GroupId'
+    control_data: config.TestEnvParam.JiTuanXianJinFaPiaoDaYin.GroupId
+
+  select select_list.cond_START_MONTH value with JiTuanXianJinFaPiaoDaYin_print_day:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"cond_START_MONTH").select (config.TestEnvParam.JiTuanXianJinFaPiaoDaYin.print_day).to_s'
+    control_data: config.TestEnvParam.JiTuanXianJinFaPiaoDaYin.print_day
+
+  click button.cond_queryButt:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+
+  click checkbox.T_Table.1.0 where velue like JiTuanXianJinFaPiaoDaYin_Acct_id:
+    control_script: '
+    	@a=@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id => /wade_popup_frame_UserSelector/).table(:id,"T_Table");
+    	for @i in 0..60 do
+    		if @a.[](@i).[](0).text.to_s == (config.TestEnvParam.JiTuanXianJinFaPiaoDaYin.Acct_id).to_s then
+    			break;
+    		else
+    			if @i==60 then
+    				config.TestEnvParam.JiTuanXianJinFaPiaoDaYin.Acct_id.should ==  0;
+    				puts "提供账户编码"+(config.TestEnvParam.JiTuanXianJinFaPiaoDaYin.Acct_id).to_s+"在表记录中不存在";
+    			end
+    		end;
+    	end;
+    	@a.[](@i).[](0).click;
+    '
+  set checkbox.T_Table.1.0:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"T_Table").[](1).[](0).click'
+
+  set text_field.cond_REMARK value with test:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_REMARK").set "test"'
+
+  click button.beforePrint:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"beforePrint").click'
+
+  click button.DianZiFaPiaoDaYin:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id => /wade_popup_framenotechecker/).button(:text,"电子发票打印").click'

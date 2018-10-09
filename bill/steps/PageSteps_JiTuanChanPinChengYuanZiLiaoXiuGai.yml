@@ -1,0 +1,33 @@
+
+PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai:
+  #点击集团产品新增菜单按钮
+  click link JiTuanChanPinChengYuanZiLiaoXiuGai:
+    control_script: '@naboss_page.link(:id,"crm8260").click'
+
+  set text_field.editBaseDatum value JiTuanChanPinChengYuanZiLiaoXiuGai_CaiLing_SerialNumber:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.JiTuanChanPinChengYuanZiLiaoXiuGai.CaiLing.SerialNumber;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanChanPinChengYuanZiLiaoXiuGai.CaiLing.SerialNumber
+
+  click table.tr where text like CaiLing:
+    control_script: '
+    	a=(@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").div(:class,"c_scroll c_scroll-x c_scroll-table-10").table);
+    	Watir::Wait.until{a.exist?};
+    	for i in 1..10 do
+    		if a.[](i).[](4).text == "集团彩铃" then
+    			break;
+    		end
+    	end;
+    	a.[](i).[](3).click;
+    '
+
+  click div.mytab_tab where text like ChanPinCanShuXinXi:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").div(:id,"mytab_tab").element(:text,"产品参数信息").click'
+
+  click element.CANCEL_LING:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").div(:id,"mytab_content").element(:id,"CANCEL_LING").click'
+
+  click button.bnext:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:id,"bnext").click'

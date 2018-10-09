@@ -1,0 +1,5 @@
+---
+2017-05-17_100114:
+- BillFeatures | SMS_FreeRes_Exist | 清单级优惠_短信_存在相应的免费资源
+- BillFeatures | Voice_FreeRes_Exist | 清单级优惠_语音_存在相应的免费资源
+- BillFeatures | GPRS_FreeRes_Exist | 清单级优惠_GPRS_存在相应的免费资源

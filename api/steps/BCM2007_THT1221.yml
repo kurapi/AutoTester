@@ -1,0 +1,19 @@
+---
+BCM2007_THT1221:
+  Scenario1_quanqiutong :
+    request_message: config.TestEnvParam.ITF_CCHT_SendSMS
+    sub_param:
+      RECV_OBJECT: 13825631460
+    expectation: 'X_RESULTCODE=["0"]'
+
+  Scenario2_shenzhouxing :
+    request_message: config.TestEnvParam.ITF_CCHT_SendSMS
+    sub_param:
+      RECV_OBJECT: 18289501414
+    expectation: 'X_RESULTCODE=["0"]'
+
+  Scenario3_dinggandidai :
+    request_message: config.TestEnvParam.ITF_CCHT_SendSMS
+    sub_param:
+      RECV_OBJECT: 18889397474
+    expectation: 'X_RESULTCODE=["0"]'

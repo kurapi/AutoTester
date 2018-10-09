@@ -1,0 +1,22 @@
+PageSteps_JiTuanZhangHuGuanLi:
+  click link JiTuanZhangHuGuanLi:
+    control_script: '@naboss_page.link(:id,"crm8180").click'
+
+  set text_field.GROUP_ID_NAME value JiTuanZhangHuXinZeng_GROUP_ID:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"GROUP_ID_NAME").set config.TestEnvParam.JiTuanZhangHuXinZeng.GROUP_ID;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanZhangHuXinZeng.GROUP_ID
+
+  record JiTuanZhangHuXinZeng_acctID:
+    control_script: '
+    writeConfig "config.TestEnvParam.JiTuanZhangHuXinZeng.ACCT_ID",(select_acctId_from_orderID @order_id);
+    '
+    control_data: config.TestEnvParam.JiTuanZhangHuXinZeng.ACCT_ID
+
+  click button.bcreateTop:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"bcreateTop").click'
+
+  click button.bcreate:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"bcreate").click'

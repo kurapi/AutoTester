@@ -1,0 +1,27 @@
+PageSteps_JiTuanChanPinChengYuanXinZeng:
+  #点击集团产品新增菜单按钮
+  click link JiTuanChanPinChengYuanXinZeng:
+    control_script: '@naboss_page.link(:id,"crm8250").click'
+
+  set text_field.cond_GROUP_SERIAL_NUMBER value JiTuanChanPinXinZeng_CaiLing_productID:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").text_field(:id,"cond_GROUP_SERIAL_NUMBER").set config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.SerialNumber;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.SerialNumber
+
+  set text_field.PAY_PLAN_SEL_PLAN_TYPE value JiTuanChanPinXinZeng_CaiLing_SerialNumber:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.JiTuanChanPinChengYuanXinZeng.SerialNumber;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanChanPinChengYuanXinZeng.SerialNumber
+
+  select select_list.PAY_PLAN_SEL_PLAN_TYPE value with GeRenFuFei:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").select_list(:id,"PAY_PLAN_SEL_PLAN_TYPE").select("个人付费")'
+
+  select select_list.ROLE_CODE_B value with PuTongChengYuan:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").select_list(:id,"ROLE_CODE_B").select("普通成员")'
+
+  click button.bnext:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:id,"bnext").click'

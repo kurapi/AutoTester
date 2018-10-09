@@ -1,0 +1,20 @@
+PageSteps_PuTongJiDaFaPiaoZuoFei:
+  #点击客户资料综合查询菜单按钮
+  click link GeRenPuTongFaPiaoZuoFei:
+    control_script: '@naboss_page.link(:id,"BIL1330").click'
+
+  set text_field.serial_number value GeRenXianJinFaPiaoDaYin_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.GeRenXianJinFaPiaoDaYin.SerialNumber'
+    control_data: config.TestEnvParam.GeRenXianJinFaPiaoDaYin.SerialNumber
+
+  set text_field.serial_number value JiTuanPuTongFaPiaoZuoFei_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.config.TestEnvParam.JiTuanPuTongFaPiaoZuoFei.SerialNumber'
+    control_data: config.TestEnvParam.JiTuanPuTongFaPiaoZuoFei.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+    expectation: 'Watir::Wait.until(10){@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"ScheduleTable").[](1).[](1).exist?}'
+
+  click button.beforeCancel:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"beforeCancel").click'
+

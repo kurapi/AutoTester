@@ -1,0 +1,18 @@
+PageSteps_MuVPMNWaiWangHaoMaXinZeng:
+  #点击母VPMN网外号码新增
+  click link MuVPMNWaiWangHaoMaXinZeng:
+    control_script: '@naboss_page.link(:id,"crm82B3").click'
+
+  set text_field.cond_SERIAL_NUMBER value MuVPMNWaiWangHaoMaXinZeng_cond_SerialNumber and send enterKey:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"queryForm").text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.MuVPMNWaiWangHaoMaXinZeng.cond_SERIAL_NUMBER;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.MuVPMNWaiWangHaoMaXinZeng.cond_SERIAL_NUMBER
+
+  set text_field.OUT_SERIAL_NUMBER value MuVPMNWaiWangHaoMaXinZeng_OUT_SerialNumber:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"outSerialNumberPart").text_field(:id,"OUT_SERIAL_NUMBER").set config.TestEnvParam.MuVPMNWaiWangHaoMaXinZeng.OUT_SERIAL_NUMBER;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.MuVPMNWaiWangHaoMaXinZeng.OUT_SERIAL_NUMBER

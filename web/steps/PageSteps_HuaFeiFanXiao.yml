@@ -1,0 +1,23 @@
+PageSteps_HuaFeiFanXiao:
+  #点击话费返销菜单按钮
+  click link HuaFeiFanXiao:
+    control_script: '@naboss_page.div(:class,"m_subnav").link(:id,"BIL1102").click'
+
+  set text_field.serial_number value HuaFeiFanXiao_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.HuaFeiFanXiao.SerialNumber'
+    control_data: config.TestEnvParam.HuaFeiFanXiao.SerialNumber
+
+  set text_field.serial_number value JiTuanKeHuShouFei_YinGaiZeng_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.SerialNumber'
+    control_data: config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+
+  set text_field.CANCEL_REMARK value test:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"CANCEL_REMARK").set "test"'
+
+  click button.cancelButt:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cancelButt").click'
+
+

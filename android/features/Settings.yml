@@ -1,0 +1,22 @@
+---
+SettingsFeatures:
+  initialize first startup:
+    - SettingsSteps | agree share location
+
+  Switch to test environment:
+    - AccountSteps | enter My Account page
+    - SettingsSteps | switch to test environment
+
+  Change Country to China:
+    - AccountSteps | enter My Account page
+    - SettingsSteps | enter Settings page
+    - SettingsSteps | enter Select Country page
+    - SettingsSteps | select China
+    - SettingsSteps | back to last page
+
+  Change Country to HongKong:
+    - AccountSteps | enter My Account page
+    - SettingsSteps | enter Settings page
+    - SettingsSteps | enter Select Country page
+    - SettingsSteps | select HongKong
+    - SettingsSteps | back to last page

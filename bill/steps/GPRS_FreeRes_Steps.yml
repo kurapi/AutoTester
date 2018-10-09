@@ -1,0 +1,308 @@
+---
+GPRS_FreeRes_Steps:
+  #初始化测试环境
+  init GPRS_FreeRes Env:
+    control_script: '@BillTestDriver=BillTestDriver.new("SMSFreeRes")'
+
+  creat Note bill:
+    control_script: '
+    @BillTestDriver.creatGPRSbill "1073741824";
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+
+  get BDS UserBillInfo befor fileTransferServer:
+    control_script: '
+    @BillTestDriver.tempS1=@BillTestDriver.getBDSData;
+    step["step_print"]="执行话单前的账单数据："+@BillTestDriver.tempS1;
+    '
+  get BDS DiscntUse befor fileTransferServer:
+    control_script: '
+    @BillTestDriver.resUsed_Bef=@BillTestDriver.getBDSResData("300200");
+    step["step_print"]="执行话单前的免费资源数据："+@BillTestDriver.resUsed_Bef.to_s;
+    '
+
+  bill file Transfer Server:
+    control_script: '
+    @BillTestDriver.fileTransferServer;
+    '
+
+  calculate preferential path:
+    control_script: '
+    @BillTestDriver.diffFreeCode_gprs;
+    '
+
+  get BDS UserBillInfo after fileTransferServer:
+    control_script: '
+    @BillTestDriver.tempS2=@BillTestDriver.getBDSData;
+    step["step_print"]="执行话单后的账单数据："+@BillTestDriver.tempS2.to_s;
+    '
+
+  get BDS DiscntUse after fileTransferServer:
+    control_script: '
+    @BillTestDriver.resUsed_Aft=@BillTestDriver.getBDSResData("300200");
+    step["step_print"]="执行话单后的免费资源数据："+@BillTestDriver.resUsed_Aft.to_s;
+    '
+
+  get BDS GradeUse after fileTransferServer:
+    control_script: '
+    @BillTestDriver.tempS3=@BillTestDriver.getBDSGradeData("350502");
+    step["step_print"]="执行话单后的升档套餐资源数据： GRADE="+@BillTestDriver.tempS3.to_s;
+    '
+  GradeUse should equal to 1:
+    control_script: ''
+    expectation: '@BillTestDriver.tempS3.to_s=="1"'
+
+  GradeUse should equal to 2:
+    control_script: ''
+    expectation: '@BillTestDriver.tempS3.to_s=="2"'
+
+  get bill use 11000:
+    control_script: '
+    @BillTestDriver.getBillUser(@BillTestDriver.tempS1,@BillTestDriver.tempS2,"11000");
+    '
+
+  get bill use 10053:
+    control_script: '
+    @BillTestDriver.getBillUser(@BillTestDriver.tempS1,@BillTestDriver.tempS2,"10053");
+    '
+
+  get bill use 15569:
+    control_script: '
+    @BillTestDriver.getBillUser(@BillTestDriver.tempS1,@BillTestDriver.tempS2,"15569");
+    '
+
+  check preferential path:
+    control_script: '
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check preferential path 10000/1:
+    control_script: '
+      @BillTestDriver.free_code1="10000/1";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check preferential path 0/1:
+    control_script: '
+      @BillTestDriver.free_code1="0/1";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check preferential path 2900/1:
+    control_script: '
+      @BillTestDriver.free_code1="2900/1";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check preferential path 296960/1:
+    control_script: '
+      @BillTestDriver.free_code1="296960/1";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check preferential path 0/1;1:
+    control_script: '
+      @BillTestDriver.free_code1="0/1;1";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check bill result 10053 0 0 0:
+    control_script: '
+      @BillTestDriver.redisStrs="10053 0 0 0";
+      step["step_print"]= "预期账单#{@BillTestDriver.redisStrs.to_s}";
+      step["step_print"]+= "<br>查询账单#{@BillTestDriver.bILL_USER_TEST.to_s}";
+
+      if @BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs then
+        step["step_print"]+= "<br>内存库查询账单结果与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询账单结果与预期不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs'
+
+  check bill result 10053 29696 29696 29696:
+    control_script: '
+      @BillTestDriver.redisStrs="10053 29696 29696 29696";
+      step["step_print"]= "预期账单#{@BillTestDriver.redisStrs.to_s}";
+      step["step_print"]+= "<br>查询账单#{@BillTestDriver.bILL_USER_TEST.to_s}";
+
+      if @BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs then
+        step["step_print"]+= "<br>内存库查询账单结果与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询账单结果与预期不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs'
+
+  check bill result 15569 290 290 290:
+    control_script: '
+      @BillTestDriver.redisStrs="15569 290 290 290";
+      step["step_print"]= "预期账单#{@BillTestDriver.redisStrs.to_s}";
+      step["step_print"]+= "<br>查询账单#{@BillTestDriver.bILL_USER_TEST.to_s}";
+
+      if @BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs then
+        step["step_print"]+= "<br>内存库查询账单结果与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询账单结果与预期不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs'
+
+  check bill result 15569 1000 1000 1000:
+    control_script: '
+      @BillTestDriver.redisStrs="15569 1000 1000 1000";
+      step["step_print"]= "预期账单#{@BillTestDriver.redisStrs.to_s}";
+      step["step_print"]+= "<br>查询账单#{@BillTestDriver.bILL_USER_TEST.to_s}";
+
+      if @BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs then
+        step["step_print"]+= "<br>内存库查询账单结果与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询账单结果与预期不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs'
+
+
+  check res use,should use 524288000:
+    control_script: '
+      step["step_print"]= "执行前资源使用情况#{@BillTestDriver.resUsed_Bef.to_s}";
+      step["step_print"]+= "<br>执行后资源使用情况#{@BillTestDriver.resUsed_Aft.to_s}";
+      if (@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 524288000 then
+        step["step_print"]+= "<br>内存库查询免费资源使用与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询免费资源使用与预期不一致"
+      end;
+    '
+    expectation: '(@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 524288000'
+
+  check res use,should use 0:
+    control_script: '
+      step["step_print"]= "执行前资源使用情况#{@BillTestDriver.resUsed_Bef.to_s}";
+      step["step_print"]+= "<br>执行后资源使用情况#{@BillTestDriver.resUsed_Aft.to_s}";
+      if (@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 0 then
+        step["step_print"]+= "<br>内存库查询免费资源使用与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询免费资源使用与预期不一致"
+      end;
+    '
+    expectation: '(@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 0'
+
+  creat Note bill value with 500M:
+    control_script: '
+    @BillTestDriver.creatGPRSbill "524288000";
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+
+  creat Note bill value with 10M:
+    control_script: '
+    @BillTestDriver.creatGPRSbill "10485760";
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+
+  creat Note bill value with 90M:
+    control_script: '
+    @BillTestDriver.creatGPRSbill "94371840";
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+  creat Note bill value with 200M:
+    control_script: '
+    gprs=200*1024*1024;
+    @BillTestDriver.creatGPRSbill gprs.to_s;
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+
+  creat Note bill value with 250M:
+    control_script: '
+    gprs=250*1024*1024;
+    @BillTestDriver.creatGPRSbill gprs.to_s;
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+
+  creat Note bill value with 15G:
+    control_script: '
+    gprs=15*1024*1024*1024;
+    @BillTestDriver.creatGPRSbill gprs.to_s;
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+
+  get remind sms 250M:
+    control_script: '
+    @BillTestDriver.sms_expectation="【流量提醒】您好！截至05月16日10时09分，您本月已使用移动数据流量250.00MB，套餐内流量剩余250.00MB，其中国内流量剩余250.00MB，如需取消提醒，请回复QXLLTX。【中国移动】";
+    @BillTestDriver.select_o_oht_msm;
+    step["step_print"]= "预期短信内容：  #{@BillTestDriver.sms_expectation.to_s}";
+    '
+
+  get remind sms 450M:
+    control_script: '
+    @BillTestDriver.sms_expectation="【流量提醒】您好！截至05月16日10时13分，您本月已使用移动数据流量450.00MB，套餐内流量剩余50.00MB，其中国内流量剩余50.00MB，为节省您的上网费用，推荐您回复KTAXB10办理流量安心包，流量不超不收费，流量超出后先按0.29元/M计费，每满10元可使用100M国内流量（含10元流量费用已产生的约35M国内流量），每满60元可使用1024M国内流量（含60元流量费用已产生的约535M国内流量），自动循环优惠，只需一次办理，无须重复订购。如需取消提醒，请回复QXLLTX。【中国移动】";
+    @BillTestDriver.select_o_oht_msm;
+    step["step_print"]= "预期短信内容：  #{@BillTestDriver.sms_expectation.to_s}";
+    '
+
+  sms_str:
+    control_script: 'step["step_print"]="实际提醒内容：  #{@BillTestDriver.sms_str}"'
+
+  check remind sms:
+    control_script: '
+    sleep 8;
+    if @BillTestDriver.sms_expectation.to_s.sub(/[\d][\d]月[\d][\d]日[\d][\d]时[\d][\d]分/,"月日时分") == @BillTestDriver.sms_str.sub(/[\d][\d]月[\d][\d]日[\d][\d]时[\d][\d]分/,"月日时分") then
+      step["step_print"]= "短信内容查询免费资源使用与预期一致"
+    else
+      step["step_print"]= "<br>短信内容查询免费资源使用与预期不一致"
+    end;
+    '
+    expectation: '@BillTestDriver.sms_str.sub(/[\d][\d]月[\d][\d]日[\d][\d]时[\d][\d]分/,"月日时分") == @BillTestDriver.sms_expectation.to_s.sub(/[\d][\d]月[\d][\d]日[\d][\d]时[\d][\d]分/,"月日时分")'
+
+  check remind m_remind_work:
+    control_script: '
+    @BillTestDriver.select_m_remind_work;
+    if @BillTestDriver.remind_state.to_s == "3" then
+      step["step_print"]= "短信工单完工，状态为：#{@BillTestDriver.remind_state}"
+    else
+      step["step_print"]= "短信工单未完工，状态为：#{@BillTestDriver.remind_state}"
+    end;
+    '
+    expectation: '@BillTestDriver.remind_state == "3"'
+

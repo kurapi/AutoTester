@@ -1,0 +1,29 @@
+---
+PageSteps_YinXiaoHuoDongShouLi:
+  #点击营销活动受理菜单按钮
+  click link yinxiaohuodongshouli:
+    control_script: '@naboss_page.link(:id,"crm9331").click'
+
+  #在营销活动受理页面的服务号码文本框输入服务号码
+  set text_field.AUTH_SERIAL_NUMBER value yinxiaohuodongshouli_serial_number_AUTH:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"AUTH_SERIAL_NUMBER").set config.TestEnvParam.YinXiaoHuoDongShouLi.SerialNumberAUTH'
+    data: config.TestEnvParam.YinXiaoHuoDongShouLi.SerialNumberAUTH
+
+  #在营销活动受理页面点击查询按钮
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AUTH_SUBMIT_BTN").click'
+
+  #在营销活动受理页面的活动类型下拉框选择【非签约类】礼包销售活动
+  select select_list.SALE_CAMPN_TYPE with text_feiqianyuelei:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"SALE_CAMPN_TYPE").select("[非签约类]礼包销售活动")'
+
+  #在营销活动受理页面的下拉框选择99999999|测试活动
+  select select_list.SALE_PRODUCT_ID with text_youxiwanjia:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"SALE_PRODUCT_ID").select("99999999|测试活动")'
+
+  #在营销活动受理页面的活动选择区选择营销活动 游戏玩家
+  click li.text_youxiwanjia:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"listContent").li(:text,"测试包|99999999").link.click'
+
+
+

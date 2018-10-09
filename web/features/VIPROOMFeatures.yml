@@ -1,0 +1,38 @@
+---
+VIPROOMFeatures:
+  add companyGuest:
+    - UserSteps | 点击服务准备链接
+    - UserSteps | 点击公司宾客新增管理链接
+    - PageSteps_CompanyGuest | 点击新增按钮
+    - PageSteps_CompanyGuest | 录入表单选择航班日期为20180515
+    - PageSteps_CompanyGuest | 录入表单填写航班号
+    - PageSteps_CompanyGuest | 点击航班号放大镜查看按钮
+    - PageSteps_CompanyGuest | 选择旅客陈文霞
+    - PageSteps_CompanyGuest | 输入职务打手
+    - PageSteps_CompanyGuest | 点击提交按钮
+    - UserSteps | 关闭签页
+
+  update companyGuest:
+    #- UserSteps | 点击服务准备链接
+    - UserSteps | 点击公司宾客新增管理链接
+    - PageSteps_CompanyGuest | 查询表单填写航班号
+    - PageSteps_CompanyGuest | 查询表单选择航班日期为20180515
+    - PageSteps_CompanyGuest | 查询表单填写宾客姓名陈文霞
+    - PageSteps_CompanyGuest | 点击查询按钮
+    - PageSteps_CompanyGuest | 校验第一条记录的姓名是否为陈文霞
+    - PageSteps_CompanyGuest | 对第一条记录做修改操作
+    - PageSteps_CompanyGuest | 输入职务杀手
+    - PageSteps_CompanyGuest | 点击保存按钮
+    - PageSteps_CompanyGuest | 校验第一条记录的姓名是否为陈文霞
+    - UserSteps | 关闭签页
+#
+  delete companyGuest:
+    #- UserSteps | 点击服务准备链接
+    - UserSteps | 点击公司宾客新增管理链接
+    - PageSteps_CompanyGuest | 查询表单填写航班号
+    - PageSteps_CompanyGuest | 查询表单选择航班日期为20180515
+    - PageSteps_CompanyGuest | 查询表单填写宾客姓名陈文霞
+    - PageSteps_CompanyGuest | 点击查询按钮
+    - PageSteps_CompanyGuest | 校验第一条记录的姓名是否为陈文霞
+    - PageSteps_CompanyGuest | 对第一条记录做删除操作
+    - UserSteps | 关闭签页

@@ -1,0 +1,61 @@
+---
+StoreSteps:
+  enter Store page:
+    control_id: btnMenuStore
+    control_action: click
+    expectation: uiviewStore
+
+  enter Phantom 4 page:
+    control_id: txtProduct-phantom-4
+    control_action: click
+    expectation: Phantom 4
+
+  add to cart:
+    control_id: btnAddToCart
+    control_action: click
+    expectation: btnBuyNow
+
+  back to Store page from product page:
+    control_id: btnArrowLeft
+    control_action: click
+    expectation: uiviewStore
+
+  enter My Cart page:
+    control_id: btnProductCart
+    control_action: click
+    expectation: uiviewMyCart
+
+  view My Cart page:
+    control_id: gotoShopCart
+    control_action: click
+    expectation: uiviewMyCart
+
+  checkout cart when unlogged in:
+    control_id: btnCheckOut
+    control_action: click
+    expectation: uiviewLogIn
+
+  checkout cart when logged in:
+    control_id: btnCheckOut
+    control_action: click
+    expectation: uiviewMyAddresses
+
+  choose Shenzhen city(optional):
+    control_id: Test_CN_ShenZhen
+    control_action: click
+    optional: true
+
+  choose cash on delivery:
+    control_id: tablecellcash_on_delivery
+    control_action: click
+    expectation: 结算&&tabelcellUseCoupon
+
+  confirm order:
+    control_id: 提交订单
+    control_action: click
+    expectation: 订单已提交
+
+  back to Store page from order page:
+    control_id: tabbar home gray
+    control_action: click
+    expectation: uiviewStore

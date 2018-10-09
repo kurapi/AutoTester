@@ -1,0 +1,12 @@
+PageSteps_YongHuTaoCanShiYongLiangChaXun:
+  click link YongHuTaoCanShiYongLiangChaXun:
+    control_script: '@naboss_page.link(:id,"BIL1515").click'
+
+  set text_field.serial_number value YongHuTaoCanShiYongLiangChaXun_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.YongHuTaoCanShiYongLiangChaXun.SerialNumber'
+    control_data: config.TestEnvParam.YongHuTaoCanShiYongLiangChaXun.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+    expectation: 'Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"DiscntQueryTable").[](1).[](0).exist?}'
+

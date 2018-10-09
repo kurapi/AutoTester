@@ -1,0 +1,23 @@
+---
+PageSteps_YeWuFanXiao:
+  #点击业务返销菜单按钮
+  click link yewufanxiao:
+    control_script: '@naboss_page.link(:id,"crm9401").click'
+    control_recover: '@naboss_page.link(:id,"crm9242").click'
+
+  #在业务返销页面的服务号码文本框输入服务号码
+  set text_field.cond_SERIAL_NUMBER value YeWuFanXiao_FeiQianYueLei_Serial_number:
+    control_script: '@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.YeWuFanXiao.YeWuFanXiao_FeiQianYueLei_Serial_number'
+    data: config.TestEnvParam.BaoKai.SerialNumber
+
+  #在业务返销页面点击查询按钮
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"QUERY_BTN").click'
+
+  #在业务返销页面的可返销业务框选择返销活动
+  set checkbox.e_checkbox:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"TradeInfoPart").checkbox(:class,"e_checkbox").set'
+
+  #在业务返销页面的业务类型框选择返销活动类型
+  select select_list.cond_TRADE_TYPE_CODE with text_FeiQianYueLei:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"cond_TRADE_TYPE_CODE").select("[252]非签约类营销活动受理")'

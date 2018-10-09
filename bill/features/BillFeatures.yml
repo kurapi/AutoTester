@@ -1,0 +1,148 @@
+---
+BillFeatures:
+  SMS_FreeRes_Exist:
+    - SMS_FreeRes_Steps | init SMS_FreeRes Env
+    - SMS_FreeRes_Steps | creat Note bill
+    - SMS_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - SMS_FreeRes_Steps | get BDS DiscntUse befor fileTransferServer
+    - SMS_FreeRes_Steps | bill file Transfer Server
+    - SMS_FreeRes_Steps | calculate preferential path
+    - SMS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - SMS_FreeRes_Steps | get BDS DiscntUse after fileTransferServer
+    - SMS_FreeRes_Steps | get bill use 11000
+    - SMS_FreeRes_Steps | check preferential path 0/1
+    - SMS_FreeRes_Steps | check bill result 11000 0 0 0
+    - SMS_FreeRes_Steps | check res use,should use 1
+
+  SMS_FreeRes_notExist:
+    - SMS_FreeRes_Steps | init SMS_FreeRes Env
+    - SMS_FreeRes_Steps | creat Note bill
+    - SMS_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - SMS_FreeRes_Steps | bill file Transfer Server
+    - SMS_FreeRes_Steps | calculate preferential path
+    - SMS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - SMS_FreeRes_Steps | get bill use 11000
+    - SMS_FreeRes_Steps | check preferential path 100/1
+    - SMS_FreeRes_Steps | check bill result 11000 10 10 10
+
+  Voice_FreeRes_Exist:
+    - Voice_FreeRes_Steps | init Voice_FreeRes Env
+    - Voice_FreeRes_Steps | creat Note bill
+    - Voice_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - Voice_FreeRes_Steps | get BDS DiscntUse befor fileTransferServer
+    - Voice_FreeRes_Steps | bill file Transfer Server
+    - Voice_FreeRes_Steps | calculate preferential path
+    - Voice_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - Voice_FreeRes_Steps | get BDS DiscntUse after fileTransferServer
+    - Voice_FreeRes_Steps | get bill use 14032
+    - Voice_FreeRes_Steps | check preferential path 0/1
+    - Voice_FreeRes_Steps | check bill result 14032 0 0 0
+    - Voice_FreeRes_Steps | check res use,should use 180
+
+  Voice_FreeRes_notExist:
+    - Voice_FreeRes_Steps | init Voice_FreeRes Env
+    - Voice_FreeRes_Steps | creat Note bill
+    - Voice_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - Voice_FreeRes_Steps | bill file Transfer Server
+    - Voice_FreeRes_Steps | calculate preferential path
+    - Voice_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - Voice_FreeRes_Steps | get bill use 14032
+    - Voice_FreeRes_Steps | check preferential path 1200/1
+
+  GPRS_FreeRes_Exist:
+    - GPRS_FreeRes_Steps | init GPRS_FreeRes Env
+    - GPRS_FreeRes_Steps | creat Note bill value with 500M
+    - GPRS_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - GPRS_FreeRes_Steps | get BDS DiscntUse befor fileTransferServer
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | calculate preferential path
+    - GPRS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - GPRS_FreeRes_Steps | get BDS DiscntUse after fileTransferServer
+    - GPRS_FreeRes_Steps | get bill use 10053
+    - GPRS_FreeRes_Steps | check preferential path 0/1
+    - GPRS_FreeRes_Steps | check bill result 10053 0 0 0
+    - GPRS_FreeRes_Steps | check res use,should use 524288000
+
+
+  GPRS_FreeRes_notExist:
+    - GPRS_FreeRes_Steps | init GPRS_FreeRes Env
+    - GPRS_FreeRes_Steps | creat Note bill
+    - GPRS_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | calculate preferential path
+    - GPRS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - GPRS_FreeRes_Steps | get bill use 10053
+    - GPRS_FreeRes_Steps | check preferential path 296960/1
+    - GPRS_FreeRes_Steps | check bill result 10053 29696 29696 29696
+
+  GPRS_AnXinPackage_6633:
+    - GPRS_FreeRes_Steps | init GPRS_FreeRes Env
+    - GPRS_FreeRes_Steps | creat Note bill value with 500M
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | calculate preferential path
+    - GPRS_FreeRes_Steps | get BDS DiscntUse befor fileTransferServer
+    - GPRS_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - GPRS_FreeRes_Steps | creat Note bill value with 10M
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | calculate preferential path
+    - GPRS_FreeRes_Steps | get BDS DiscntUse after fileTransferServer
+    - GPRS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - GPRS_FreeRes_Steps | get bill use 15569
+    - GPRS_FreeRes_Steps | check preferential path 2900/1
+    - GPRS_FreeRes_Steps | check bill result 15569 290 290 290
+    - GPRS_FreeRes_Steps | get BDS GradeUse after fileTransferServer
+    - GPRS_FreeRes_Steps | GradeUse should equal to 1
+    - GPRS_FreeRes_Steps | creat Note bill value with 90M
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | calculate preferential path
+    - GPRS_FreeRes_Steps | get BDS DiscntUse after fileTransferServer
+    - GPRS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - GPRS_FreeRes_Steps | get bill use 15569
+    - GPRS_FreeRes_Steps | check preferential path 0/1;1
+    - GPRS_FreeRes_Steps | check bill result 15569 1000 1000 1000
+    - GPRS_FreeRes_Steps | get BDS GradeUse after fileTransferServer
+    - GPRS_FreeRes_Steps | GradeUse should equal to 2
+
+  GPRS_15G_SMSremind:
+    - GPRS_FreeRes_Steps | init GPRS_FreeRes Env
+    - GPRS_FreeRes_Steps | creat Note bill value with 15G
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | check remind m_remind_work
+
+  GPRS_consume_SMSremind:
+    - GPRS_FreeRes_Steps | init GPRS_FreeRes Env
+    - GPRS_FreeRes_Steps | creat Note bill value with 250M
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | get remind sms 250M
+    - GPRS_FreeRes_Steps | sms_str
+    - GPRS_FreeRes_Steps | check remind sms
+    - GPRS_FreeRes_Steps | creat Note bill value with 200M
+    - GPRS_FreeRes_Steps | bill file Transfer Server
+    - GPRS_FreeRes_Steps | get remind sms 450M
+    - GPRS_FreeRes_Steps | sms_str
+    - GPRS_FreeRes_Steps | check remind sms
+
+  MIS_FreeRes_Exist:
+    - MIS_FreeRes_Steps | init MIS_FreeRes Env
+    - MIS_FreeRes_Steps | creat Note bill
+    - MIS_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+    - MIS_FreeRes_Steps | bill file Transfer Server
+    - MIS_FreeRes_Steps | calculate preferential path
+    - MIS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+    - MIS_FreeRes_Steps | get bill use 14602
+    - MIS_FreeRes_Steps | check preferential path
+    - MIS_FreeRes_Steps | check bill result
+
+  #SMS_FreeRes_notExist:
+  #  - SMS_FreeRes_Steps | init SMS_FreeRes Env
+  #  - SMS_FreeRes_Steps | creat Note bill
+  #  - SMS_FreeRes_Steps | get BDS UserBillInfo befor fileTransferServer
+  #  - SMS_FreeRes_Steps | get BDS DiscntUse befor fileTransferServer
+  #  - SMS_FreeRes_Steps | bill file Transfer Server
+  #  - SMS_FreeRes_Steps | calculate preferential path
+  #  - SMS_FreeRes_Steps | get BDS UserBillInfo after fileTransferServer
+  #  - SMS_FreeRes_Steps | get BDS DiscntUse after fileTransferServer
+  #  - SMS_FreeRes_Steps | get bill use 11000
+  #  - SMS_FreeRes_Steps | check preferential path
+  #  - SMS_FreeRes_Steps | check bill result
+  #  - SMS_FreeRes_Steps | check res use,should use 0

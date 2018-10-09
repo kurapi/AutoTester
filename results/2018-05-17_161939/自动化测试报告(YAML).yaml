@@ -1,0 +1,150 @@
+---
+testcase_name: 2017-04-27_145753
+features_suite:
+- feature_name_desc: " 公司宾客新增"
+  features_suite_name: VIPROOMFeatures
+  feature_name: add companyGuest
+  feature_steps:
+  - control_script: '@naboss_page.a(:title,"服务准备").click'
+    step_desc: 点击服务准备链接
+    step_index: 0
+    step_ruslt: passed
+  - control_script: '@naboss_page.a(:title,"公司宾客新增管理").click'
+    step_desc: 点击公司宾客新增管理链接
+    step_index: 1
+    step_ruslt: passed
+  - control_script: ' Watir::Wait.until{@naboss_page.a(:class,"btn btn-default btn-xs
+      ng-star-inserted").exist?}; @naboss_page.button(:class,"btn btn-primary ng-button-primary").click '
+    step_desc: 点击新增按钮
+    step_index: 2
+    step_ruslt: passed
+  - control_script: ' @naboss_page.text_field(:name,"addFluDate").click; @naboss_page.span(:text=>"15").click; '
+    step_desc: 录入表单选择航班日期为20180515
+    step_index: 3
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"addFltNum").set "HU7181"'
+    step_desc: 录入表单填写航班号
+    step_index: 4
+    step_ruslt: passed
+  - control_script: '@naboss_page.i(:class=>"fa fa-search",:index=>3).click'
+    step_desc: 点击航班号放大镜查看按钮
+    step_index: 5
+    step_ruslt: passed
+  - control_script: '@naboss_page.a(:text,"陈文霞").click'
+    step_desc: 选择旅客陈文霞
+    step_index: 6
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"addpsrPosition").set "打手"'
+    step_desc: 输入职务打手
+    step_index: 7
+    step_ruslt: passed
+  - control_script: ' Watir::Wait.until{@naboss_page.a(:text,"陈文霞").exist?}; @naboss_page.div(:class,"widget-footer").button.click '
+    step_desc: 点击提交按钮
+    step_index: 8
+    step_ruslt: passed
+  - control_script: '@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error
+      ng-star-inserted").click'
+    step_desc: 关闭签页
+    step_index: 9
+    step_ruslt: passed
+  feature_ruslt: passed
+- feature_name_desc: " 公司宾客修改"
+  features_suite_name: VIPROOMFeatures
+  feature_name: update companyGuest
+  feature_steps:
+  - control_script: '@naboss_page.a(:title,"服务准备").click'
+    step_desc: 点击服务准备链接
+    step_index: 0
+    step_ruslt: passed
+  - control_script: '@naboss_page.a(:title,"公司宾客新增管理").click'
+    step_desc: 点击公司宾客新增管理链接
+    step_index: 1
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"psrFltNum").set "HU7181"'
+    step_desc: 查询表单填写航班号
+    step_index: 2
+    step_ruslt: passed
+  - control_script: ' @naboss_page.text_field(:name=>"fltDate").click; @naboss_page.span(:text=>"15").click; '
+    step_desc: 查询表单选择航班日期为20180515
+    step_index: 3
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"psrCnname").set "陈文霞"'
+    step_desc: 查询表单填写宾客姓名陈文霞
+    step_index: 4
+    step_ruslt: passed
+  - control_script: ' @naboss_page.button(:class,"btn btn-default ng-button-default
+      search-btn-width ng-star-inserted").click '
+    step_desc: 点击查询按钮
+    step_index: 5
+    step_ruslt: passed
+  - control_script: puts @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text;
+    expectation: '@naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text=="陈文霞";'
+    step_desc: 校验第一条记录的姓名是否为陈文霞
+    step_index: 6
+    step_ruslt: passed
+  - control_script: ' @naboss_page.a(:text,"修改").click; '
+    step_desc: 对第一条记录做修改操作
+    step_index: 7
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"addpsrPosition").set "杀手"'
+    step_desc: 输入职务杀手
+    step_index: 8
+    step_ruslt: passed
+  - control_script: ' @naboss_page.button(:text,"保存").button.click '
+    step_desc: 点击保存按钮
+    step_index: 9
+    screenshort_url: D:/WorkSpace/AutoTester/results/2018-05-17_161939/screenshots/2018-05-17_162120.bmp
+  - control_script: puts @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text;
+    expectation: '@naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text=="陈文霞";'
+    step_desc: 校验第一条记录的姓名是否为陈文霞
+  - control_script: '@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error
+      ng-star-inserted").click'
+    step_desc: 关闭签页
+  feature_ruslt: failed
+  error_info: !ruby/exception:Watir::Exception::UnknownObjectException
+    message: 'timed out after 30 seconds, waiting for #<Watir::Button: located: false;
+      {:text=>"保存", :tag_name=>"button"} --> {:tag_name=>"button"}> to be located'
+- feature_name_desc: " 公司宾客删除"
+  features_suite_name: VIPROOMFeatures
+  feature_name: delete companyGuest
+  feature_steps:
+  - control_script: '@naboss_page.a(:title,"服务准备").click'
+    step_desc: 点击服务准备链接
+    step_index: 0
+    step_ruslt: passed
+  - control_script: '@naboss_page.a(:title,"公司宾客新增管理").click'
+    step_desc: 点击公司宾客新增管理链接
+    step_index: 1
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"psrFltNum").set "HU7181"'
+    step_desc: 查询表单填写航班号
+    step_index: 2
+    step_ruslt: passed
+  - control_script: ' @naboss_page.text_field(:name=>"fltDate").click; @naboss_page.span(:text=>"15").click; '
+    step_desc: 查询表单选择航班日期为20180515
+    step_index: 3
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"psrCnname").set "陈文霞"'
+    step_desc: 查询表单填写宾客姓名陈文霞
+    step_index: 4
+    step_ruslt: passed
+  - control_script: ' @naboss_page.button(:class,"btn btn-default ng-button-default
+      search-btn-width ng-star-inserted").click '
+    step_desc: 点击查询按钮
+    step_index: 5
+    step_ruslt: passed
+  - control_script: puts @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text;
+    expectation: '@naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text=="陈文霞";'
+    step_desc: 校验第一条记录的姓名是否为陈文霞
+    step_index: 6
+    step_ruslt: passed
+  - control_script: ' @naboss_page.a(:text,"删除").click; @naboss_page.button(:text,"确认").click; '
+    step_desc: 对第一条记录做删除操作
+    step_index: 7
+    step_ruslt: passed
+  - control_script: '@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error
+      ng-star-inserted").click'
+    step_desc: 关闭签页
+    step_index: 8
+    step_ruslt: passed
+  feature_ruslt: passed

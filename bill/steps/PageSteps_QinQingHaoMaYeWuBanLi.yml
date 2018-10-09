@@ -1,0 +1,40 @@
+---
+PageSteps_QinQingHaoMaYeWuBanLi:
+  #点击亲情号码业务办理菜单按钮
+  click link qinqinghaomayewubanli:
+    control_script: '@naboss_page.a(:id,"crm9408").click'
+
+  #在亲情号码业务办理页面的服务号码文本框输入服务号码
+  set text_field.AUTH_SERIAL_NUMBER value qinqinghaomayewubanli_serial_number_AUTH:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"AUTH_SERIAL_NUMBER").set config.TestEnvParam.QinQingHaoMaYeWuBanLi.SerialNumberAUTH'
+    data: config.TestEnvParam.QinQingHaoMaYeWuBanLi.SerialNumberAUTH
+
+  #在亲情号码业务办理页面的副服务号码文本框输入服务号码
+  set text_field.FMY_SERIAL_NUMBER value qinqinghaomayewubanli_serial_number_FMY:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"AUTH_SERIAL_NUMBER").set config.TestEnvParam.QinQingHaoMaYeWuBanLi.SerialNumberFMY'
+    data: config.TestEnvParam.QinQingHaoMaYeWuBanLi.SerialNumberFMY
+
+  #在亲情号码业务办理页面点击查询按钮
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AUTH_SUBMIT_BTN").click'
+
+  #在亲情号码业务办理页面点击新增按钮
+  click i.e_ico-add:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).i(:class,"e_ico-add").click'
+
+  #在亲情号码业务办理页面点击删除按钮
+  click i.e_ico-delete:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).i(:class,"e_ico-delete").click'
+
+  #点击亲情号码列表表格的第一列
+  set checkbox.viceCheckBox:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).checkbox(:id,"viceCheckBox").set'
+
+
+
+
+
+
+
+
+

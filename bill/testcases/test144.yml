@@ -1,0 +1,13 @@
+---
+test144:
+  - PersonFeatures | KaiHu_FeiXiang58 | 开户
+  - BillFeatures | SMS_FreeRes_Exist | 清单级优惠_短信_存在相应的免费资源
+  - BillFeatures | SMS_FreeRes_notExist | 清单级优惠_短信_无免费资源可用
+  - BillFeatures | Voice_FreeRes_Exist | 清单级优惠_语音_存在相应的免费资源
+  - BillFeatures | Voice_FreeRes_notExist | 清单级优惠_语音_无免费资源可用
+  - BillFeatures | GPRS_FreeRes_Exist | 清单级优惠_GPRS_存在相应的免费资源
+  - BillFeatures | GPRS_FreeRes_notExist | 清单级优惠_GPRS_无免费资源可用
+  - BillFeatures | GPRS_AnXinPackage_6633 | 清单级优惠_GPRS_流量安心包6633
+  - BillFeatures | GPRS_15G_SMSremind | 清单级优惠_GPRS_流量15G封顶
+  - BillFeatures | GPRS_consume_SMSremind | 清单级优惠_GPRS_消费提醒
+  - BillFeatures | MIS_FreeRes_Exist | 清单级优惠_MISC

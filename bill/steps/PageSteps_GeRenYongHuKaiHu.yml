@@ -1,0 +1,142 @@
+---
+PageSteps_GeRenYongHuKaiHu:
+  #点击个人用户开户按钮
+  click link gerenyonghukaihu:
+    control_script: '@naboss_page.a(:id,"crm9112").click'
+
+  #在个人用户开户页面输入服务号码
+  set text_field.SERIAL_NUMBER value KaiHu_QuanQiuTong_Serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"SERIAL_NUMBER").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.SerialNumber'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.SerialNumber
+
+  #在个人用户开户页面完成用户检查
+  finish CHECKBOX_LIST commit:
+    control_script: '
+      @naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"SIM_CARD_NO").click;
+      sleep 1;
+      @frameaddbyframework=@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,/wade_popup_frameaddbyframework/);
+      @frameaddbyframework.checkbox(:id,"CHECKBOX_LIST").set;
+      @frameaddbyframework.tr(:class,"odd").checkbox(:id,"CHECKBOX_LIST").set;
+      @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,/wade_popup_frameaddbyframework/).button(:id,"bsubmit").click;
+    '
+
+  set text_field.SIM_CARD_NO value KaiHu_QuanQiuTong_SIM_CARD_NO:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"SIM_CARD_NO").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.SIM_CARD_NO;
+    @naboss_page.send_keys :enter;'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.SIM_CARD_NO
+
+  select select_list.PSPT_TYPE_CODE with PassPort:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"PSPT_TYPE_CODE").select("护照")'
+
+  set text_field.PSPT_ID value KaiHu_QuanQiuTong_PSPT_ID:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"PSPT_ID").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PSPT_ID'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PSPT_ID
+
+  set text_field.CUST_NAME value KaiHu_QuanQiuTong_CUST_NAME:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"CUST_NAME").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.CUST_NAME'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.CUST_NAME
+
+  set text_field.PSPT_ADDR value KaiHu_QuanQiuTong_PSPT_ADDR:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"PSPT_ADDR").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PSPT_ADDR'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PSPT_ADDR
+
+  select BIRTHDAY is today:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"BIRTHDAY").click;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"wade_drop_calendar_today_btn").click;
+    '
+
+  set text_field.PHONE value KaiHu_QuanQiuTong_PHONE:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"PHONE").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PHONE'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PHONE
+
+  set text_field.PAY_NAME value KaiHu_QuanQiuTong_PAY_NAME:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"PAY_NAME").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PAY_NAME'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.PAY_NAME
+
+  select select_list.PAY_MODE_CODE with crash:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"PAY_MODE_CODE").select("现金")'
+
+  select ACCT_DAY.PAY_MODE_CODE with firstDay:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"ACCT_DAY").select("1日")'
+
+  click button.PasswdSetBtn:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"PasswdSetBtn").click'
+
+  set text_field.pass_NEW_PASSWD value KaiHu_QuanQiuTong_Int_PASSWD:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"pass_NEW_PASSWD").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.Int_PASSWD'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.Int_PASSWD
+
+  set text_field.pass_CONFIRM_PASSWD value KaiHu_QuanQiuTong_Int_PASSWD:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"pass_CONFIRM_PASSWD").set config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.Int_PASSWD'
+    data: config.TestEnvParam.GeRenYongHuKaiHu.KaiHu_QuanQiuTong.Int_PASSWD
+
+  click button.e_button-page-ok:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"PassSubmitBtn").click'
+
+  select select_list.PRODUCT_TYPE_CODE value QuanQiuTong:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"PRODUCT_TYPE_CODE").select "全球通"'
+
+  click button.productSelectBtn:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"productSelectBtn").click'
+
+  in the div.productTree click li.unfold:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"productTree").div(:id,"productTree_ct").link(:class,"text").click'
+
+  in the div.productTree click li.unfold value 10000000:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"productTree").div(:id,"productTree_ct").link(:text,"全球通标准套餐").click'
+
+  in the div.productTree click li.text with FeiXiang58:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"productTree").div(:id,"productTree_ct").link(:text,"飞享58套餐").click'
+
+  in the div.productTree click a.e_button-page-ok:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"productTree").div(:class,"c_popupContent").div(:class,"c_submit").element(:class,/e_button/).click'
+
+  click a.10000092:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:id,"10000092").click'
+
+  set checkbox.PE_S_22:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).checkbox(:id,"PE_S_22").set'
+
+  set checkbox.PE_D_859:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).checkbox(:id,"PE_D_859").set'
+
+  click button.AddChoiceButton:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AddChoiceButton").click'
+
+  click button.wade_msgbox_102_ct:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"wade_msgbox_102").element(:class,/e_button/).click'
+
+  record Bill user_id:
+    control_script: 'writeConfig "config.TestEnvParam.SMSFreeRes.userInfo1.user_id",(select_userId_from_orderID @order_id)'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.SerialNumber
+
+  record Bill acct_id:
+    control_script: 'writeConfig "config.TestEnvParam.SMSFreeRes.userInfo1.acct_id",(select_acctId_from_orderID @order_id)'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.SerialNumber
+
+  record Bill senderChannle:
+    control_script: '
+    config.TestEnvParam.senderChannle.each do |n|
+      n[1].split(",").each do |m|
+        m=m.split("~");
+        if config.TestEnvParam.SMSFreeRes.userInfo1.channel>m[0].to_i and config.TestEnvParam.SMSFreeRes.userInfo1.channel<m[1].to_i then
+          writeConfig "config.TestEnvParam.SMSFreeRes.userInfo1.senderChannle",n[0];
+        end;
+      end;
+    end;
+    '
+    control_data: config.TestEnvParam.SMSFreeRes.userInfo1.senderChannle
+
+  record Bill channel:
+    control_script: '
+    puts config.TestEnvParam.SMSFreeRes.userInfo1.acct_id;
+    atom=((config.TestEnvParam.SMSFreeRes.userInfo1.acct_id).to_s)[12,16].to_i;
+    if atom>8400 then
+      writeConfig "config.TestEnvParam.SMSFreeRes.userInfo1.channel",((atom-8400)/20+401)
+    else
+      writeConfig "config.TestEnvParam.SMSFreeRes.userInfo1.channel",(atom/21+1)
+    end;
+    '
+    control_data: config.TestEnvParam.SMSFreeRes.userInfo1.channel

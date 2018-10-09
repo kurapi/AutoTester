@@ -1,0 +1,21 @@
+---
+SettingsSteps:
+  #初始化测试环境
+  initialize test env:
+    control_script: "
+    @naboss_page = Watir::Browser.new :chrome;
+    "
+
+  #使用测试账户登陆系统
+  login with test account:
+    control_script: "
+    @naboss_page.goto (config.TestEnvParam.URL);
+    @naboss_page.text_field(:id, \"STAFF_ID\").set config.TestEnvParam.UserName;
+    @naboss_page.text_field(:id, \"PASSWORD\").set config.TestEnvParam.Password;
+    @naboss_page.button(:id,\"login_btn\").click
+    "
+    data: config.TestEnvParam.UserName;
+    control_recover:
+
+  clean test env:
+    control_script: "@naboss_page.li(:id,'closeAllTab').click;clickAlterAccetp(@naboss_page)"

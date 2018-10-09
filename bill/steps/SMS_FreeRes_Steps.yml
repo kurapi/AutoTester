@@ -1,0 +1,127 @@
+---
+SMS_FreeRes_Steps:
+  #初始化测试环境
+  init SMS_FreeRes Env:
+    control_script: '@BillTestDriver=BillTestDriver.new("SMSFreeRes")'
+
+  creat Note bill:
+    control_script: "
+    @BillTestDriver.creatNotebill;
+    step['step_print']='测试话单：'+@BillTestDriver.bakFile;
+    "
+
+  get BDS UserBillInfo befor fileTransferServer:
+    control_script: '
+    @BillTestDriver.tempS1=@BillTestDriver.getBDSData;
+    step["step_print"]="执行话单前的账单数据："+@BillTestDriver.tempS1;
+    '
+  get BDS DiscntUse befor fileTransferServer:
+    control_script: '
+    @BillTestDriver.resUsed_Bef=@BillTestDriver.getBDSResData("200185");
+    step["step_print"]="执行话单前的免费资源数据："+@BillTestDriver.resUsed_Bef.to_s;
+    '
+
+  bill file Transfer Server:
+    control_script: '
+    @BillTestDriver.fileTransferServer;
+    '
+
+  calculate preferential path:
+    control_script: '
+    @BillTestDriver.diffFreeCode_sms;
+    '
+
+  get BDS UserBillInfo after fileTransferServer:
+    control_script: '
+    @BillTestDriver.tempS2=@BillTestDriver.getBDSData;
+    step["step_print"]="执行话单后的账单数据："+@BillTestDriver.tempS2.to_s;
+    '
+
+  get BDS DiscntUse after fileTransferServer:
+    control_script: '
+    @BillTestDriver.resUsed_Aft=@BillTestDriver.getBDSResData("200185");
+    step["step_print"]="执行话单后的免费资源数据："+@BillTestDriver.resUsed_Aft.to_s;
+    '
+
+  get bill use 11000:
+    control_script: '
+    @BillTestDriver.getBillUser(@BillTestDriver.tempS1,@BillTestDriver.tempS2,"11000");
+    '
+
+  check preferential path 0/1:
+    control_script: '
+      @BillTestDriver.free_code1="0/1";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check preferential path 100/1:
+    control_script: '
+      @BillTestDriver.free_code1="100/1";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check bill result 11000 0 0 0:
+    control_script: '
+      @BillTestDriver.redisStrs="11000 0 0 0";
+      step["step_print"]= "预期账单#{@BillTestDriver.redisStrs.to_s}";
+      step["step_print"]+= "<br>查询账单#{@BillTestDriver.bILL_USER_TEST.to_s}";
+
+      if @BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs then
+        step["step_print"]+= "<br>内存库查询账单结果与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询账单结果与预期不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs'
+
+  check bill result 11000 10 10 10:
+    control_script: '
+      @BillTestDriver.redisStrs="11000 10 10 10";
+      step["step_print"]= "预期账单#{@BillTestDriver.redisStrs.to_s}";
+      step["step_print"]+= "<br>查询账单#{@BillTestDriver.bILL_USER_TEST.to_s}";
+
+      if @BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs then
+        step["step_print"]+= "<br>内存库查询账单结果与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询账单结果与预期不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs'
+
+  check res use,should use 1:
+    control_script: '
+      step["step_print"]= "执行前资源使用情况#{@BillTestDriver.resUsed_Bef.to_s}";
+      step["step_print"]+= "<br>执行后资源使用情况#{@BillTestDriver.resUsed_Aft.to_s}";
+      if (@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 1 then
+        step["step_print"]+= "内存库查询免费资源使用与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询免费资源使用与预期不一致"
+      end;
+    '
+    expectation: '(@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 1'
+
+  check res use,should use 0:
+    control_script: '
+      step["step_print"]= "执行前资源使用情况#{@BillTestDriver.resUsed_Bef.to_s}";
+      step["step_print"]+= "<br>执行后资源使用情况#{@BillTestDriver.resUsed_Aft.to_s}";
+      if (@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 0 then
+        step["step_print"]+= "内存库查询免费资源使用与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询免费资源使用与预期不一致"
+      end;
+    '
+    expectation: '(@BillTestDriver.resUsed_Aft.to_i-@BillTestDriver.resUsed_Bef.to_i) == 0'

@@ -1,0 +1,7 @@
+---
+BCS4165_THQ3083:
+  Scenario1_quanqiutong :
+    request_message: config.TestEnvParam.checkUserStateBySerialNumber
+    sub_param:
+      SERIAL_NUMBER: 13825631460
+    expectation: 'X_RESULTINFO=["该号码用户不存在"]'

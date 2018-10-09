@@ -1,0 +1,5 @@
+---
+test145:
+  #-  BIZ_CODE |  TRANS_CODE | 接口名
+  #zAPI | ITF_CCHT_SendSMS | 短信下发
+  - API | SS.UserInfoQrySVC.checkUserStateBySerialNumber | 用户资料校验

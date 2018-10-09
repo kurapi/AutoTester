@@ -1,0 +1,72 @@
+---
+PageSteps_CompanyGuest:
+
+  点击新增按钮:
+    control_script: '
+    Watir::Wait.until{@naboss_page.a(:class,"btn btn-default btn-xs ng-star-inserted").exist?};
+    @naboss_page.button(:class,"btn btn-primary ng-button-primary").click
+    '
+
+  录入表单选择航班日期为20180515:
+    control_script: '
+    @naboss_page.text_field(:name,"addFluDate").click;
+    @naboss_page.span(:text=>"15").click;
+    '
+
+  查询表单选择航班日期为20180515:
+    control_script: '
+    @naboss_page.text_field(:name=>"fltDate").click;
+    @naboss_page.span(:text=>"15").click;
+    '
+
+  录入表单填写航班号:
+    control_script: '@naboss_page.text_field(:name,"addFltNum").set "HU7181"'
+
+  查询表单填写航班号:
+    control_script: '@naboss_page.text_field(:name,"psrFltNum").set "HU7181"'
+
+  点击航班号放大镜查看按钮:
+    control_script: '@naboss_page.i(:class=>"fa fa-search",:index=>3).click'
+
+  选择旅客陈文霞:
+    control_script: '@naboss_page.a(:text,"陈文霞").click'
+
+  查询表单填写宾客姓名陈文霞:
+    control_script: '@naboss_page.text_field(:name,"psrCnname").set "陈文霞"'
+
+  输入职务打手:
+    control_script: '@naboss_page.text_field(:name,"addpsrPosition").set "打手"'
+
+  输入职务杀手:
+    control_script: '@naboss_page.text_field(:name,"addpsrPosition").set "杀手"'
+
+  点击查询按钮:
+    control_script: '
+    @naboss_page.button(:class,"btn btn-default ng-button-default search-btn-width ng-star-inserted").click
+    '
+
+  点击保存按钮:
+    control_script: '
+    @naboss_page.button(:text,"保存").click
+    '
+
+  点击提交按钮:
+    control_script: '
+    Watir::Wait.until{@naboss_page.a(:text,"陈文霞").exist?};
+    @naboss_page.div(:class,"widget-footer").button.click
+    '
+
+  校验第一条记录的姓名是否为陈文霞:
+    control_script: 'puts @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text;'
+    expectation: '@naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text=="陈文霞";'
+
+  对第一条记录做删除操作:
+    control_script: '
+    @naboss_page.a(:text,"删除").click;
+    @naboss_page.button(:text,"确认").click;
+    '
+
+  对第一条记录做修改操作:
+    control_script: '
+    @naboss_page.a(:text,"修改").click;
+    '

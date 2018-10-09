@@ -1,0 +1,17 @@
+---
+RecoverSteps:
+  #关闭浏览器
+  normal_recover:
+    control_script: '
+    '
+
+  #初始化测试环境
+  click confirm business prompt with index 0:
+    control_script: "
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id => 'wade_msgbox_11_btns').a.click
+    "
+  #使用测试账户登陆系统
+  click confirm business prompt with index 1:
+    control_script: "
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id => 'wade_msgbox_11_btns').a.click
+    "

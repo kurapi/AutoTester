@@ -1,0 +1,129 @@
+# Logfile created on 2018-05-17 16:29:20 +0800 by logger.rb/61378
+[2018-05-17 16:29:20] INFO: [32mLogs directory: D:/WorkSpace/AutoTester/results/2018-05-17_162920[0m
+[2018-05-17 16:29:20] INFO: [32mResults directory: D:/WorkSpace/AutoTester/results/2018-05-17_162920[0m
+[2018-05-17 16:29:20] INFO: [32mScreenshots directory: D:/WorkSpace/AutoTester/results/2018-05-17_162920/screenshots[0m
+[2018-05-17 16:29:20] INFO: [32mErrors directory: D:/WorkSpace/AutoTester/results/2018-05-17_162920/errors[0m
+[2018-05-17 16:29:20] INFO: [35mload testcase yaml file: D:/WorkSpace/AutoTester\web\testcases\2017-04-27_145753.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_BaoKai.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_BaoTing.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_ChanPinBianGeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_CompanyGuest.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_CunQuKuanRiZhiChaXun.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_GeRenXianJinFaPiaoDaYin.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_GeRenYongHuKaiHu.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_GPRS_YouHuiBianGeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_GuaShi.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_HuaFeiFanXiao.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_HuaFeiShouQu_TangTanZhuanYong.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiaoFeiShouFeiChaXun.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChanPinChengYuanXinZeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChanPinChengYuanZhuXiao.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChanPinXinZeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChanPinZhuXiao.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChanPinZiLiaoXiuGai.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanKeHuShouFeiFanXiao.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanKeHuShouFei_YinGaiZeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanXianJinFaPiaoDaYin.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JiTuanZhangHuGuanLi.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JuFangKaiJi.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_JuFangTingJi.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_KeHuZiLiaoBianGeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_KeHuZiLiaoZongHeChaXun.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_MuVPMNWaiWangHaoMaXinZeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_MuVPMNWaiWangHaoMaZhuXiao.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_PuTongJiDaFaPiaoZuoFei.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_QinQingHaoMaYeWuBanLi.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_XiangDanChaXun.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_XinBanYongHuZhangDanDaYin.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_YeWuFanXiao.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_YinXiaoHuoDongShouLi.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_YongHuTaoCanShiYongLiangChaXun.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_ZhangHuZiLiaoBianGeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_ZiVPMNJiTuanXinZeng.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/PageSteps_ZiVPMNJiTuanZhuXiao.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/RecoverSteps.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/SettingsSteps.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload steps yaml file: D:/WorkSpace/AutoTester/web/steps/UserSteps.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload features yaml file: D:/WorkSpace/AutoTester/web/features/AccountFeatures.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload features yaml file: D:/WorkSpace/AutoTester/web/features/GroupFeatures.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload features yaml file: D:/WorkSpace/AutoTester/web/features/PersonFeatures.yml[0m
+[2018-05-17 16:29:20] INFO: [36mload features yaml file: D:/WorkSpace/AutoTester/web/features/VIPROOMFeatures.yml[0m
+[2018-05-17 16:29:20] INFO: testcase_hash: {"testcase_name"=>"2017-04-27_145753", "features_suite"=>[{"feature_name_desc"=>" 公司宾客新增", "features_suite_name"=>"VIPROOMFeatures", "feature_name"=>"add companyGuest", "feature_steps"=>[{"control_script"=>"@naboss_page.a(:title,\"服务准备\").click", "step_desc"=>"点击服务准备链接"}, {"control_script"=>"@naboss_page.a(:title,\"公司宾客新增管理\").click", "step_desc"=>"点击公司宾客新增管理链接"}, {"control_script"=>" Watir::Wait.until{@naboss_page.a(:class,\"btn btn-default btn-xs ng-star-inserted\").exist?}; @naboss_page.button(:class,\"btn btn-primary ng-button-primary\").click ", "step_desc"=>"点击新增按钮"}, {"control_script"=>" @naboss_page.text_field(:name,\"addFluDate\").click; @naboss_page.span(:text=>\"15\").click; ", "step_desc"=>"录入表单选择航班日期为20180515"}, {"control_script"=>"@naboss_page.text_field(:name,\"addFltNum\").set \"HU7181\"", "step_desc"=>"录入表单填写航班号"}, {"control_script"=>"@naboss_page.i(:class=>\"fa fa-search\",:index=>3).click", "step_desc"=>"点击航班号放大镜查看按钮"}, {"control_script"=>"@naboss_page.a(:text,\"陈文霞\").click", "step_desc"=>"选择旅客陈文霞"}, {"control_script"=>"@naboss_page.text_field(:name,\"addpsrPosition\").set \"打手\"", "step_desc"=>"输入职务打手"}, {"control_script"=>" Watir::Wait.until{@naboss_page.a(:text,\"陈文霞\").exist?}; @naboss_page.div(:class,\"widget-footer\").button.click ", "step_desc"=>"点击提交按钮"}, {"control_script"=>"@naboss_page.span(:class,\"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted\").click", "step_desc"=>"关闭签页"}]}, {"feature_name_desc"=>" 公司宾客修改", "features_suite_name"=>"VIPROOMFeatures", "feature_name"=>"update companyGuest", "feature_steps"=>[{"control_script"=>"@naboss_page.a(:title,\"公司宾客新增管理\").click", "step_desc"=>"点击公司宾客新增管理链接"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrFltNum\").set \"HU7181\"", "step_desc"=>"查询表单填写航班号"}, {"control_script"=>" @naboss_page.text_field(:name=>\"fltDate\").click; @naboss_page.span(:text=>\"15\").click; ", "step_desc"=>"查询表单选择航班日期为20180515"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrCnname\").set \"陈文霞\"", "step_desc"=>"查询表单填写宾客姓名陈文霞"}, {"control_script"=>" @naboss_page.button(:class,\"btn btn-default ng-button-default search-btn-width ng-star-inserted\").click ", "step_desc"=>"点击查询按钮"}, {"control_script"=>"puts @naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text;", "expectation"=>"@naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text==\"陈文霞\";", "step_desc"=>"校验第一条记录的姓名是否为陈文霞"}, {"control_script"=>" @naboss_page.a(:text,\"修改\").click; ", "step_desc"=>"对第一条记录做修改操作"}, {"control_script"=>"@naboss_page.text_field(:name,\"addpsrPosition\").set \"杀手\"", "step_desc"=>"输入职务杀手"}, {"control_script"=>" @naboss_page.button(:text,\"保存\").click ", "step_desc"=>"点击保存按钮"}, {"control_script"=>"puts @naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text;", "expectation"=>"@naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text==\"陈文霞\";", "step_desc"=>"校验第一条记录的姓名是否为陈文霞"}, {"control_script"=>"@naboss_page.span(:class,\"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted\").click", "step_desc"=>"关闭签页"}]}, {"feature_name_desc"=>" 公司宾客删除", "features_suite_name"=>"VIPROOMFeatures", "feature_name"=>"delete companyGuest", "feature_steps"=>[{"control_script"=>"@naboss_page.a(:title,\"公司宾客新增管理\").click", "step_desc"=>"点击公司宾客新增管理链接"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrFltNum\").set \"HU7181\"", "step_desc"=>"查询表单填写航班号"}, {"control_script"=>" @naboss_page.text_field(:name=>\"fltDate\").click; @naboss_page.span(:text=>\"15\").click; ", "step_desc"=>"查询表单选择航班日期为20180515"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrCnname\").set \"陈文霞\"", "step_desc"=>"查询表单填写宾客姓名陈文霞"}, {"control_script"=>" @naboss_page.button(:class,\"btn btn-default ng-button-default search-btn-width ng-star-inserted\").click ", "step_desc"=>"点击查询按钮"}, {"control_script"=>"puts @naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text;", "expectation"=>"@naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text==\"陈文霞\";", "step_desc"=>"校验第一条记录的姓名是否为陈文霞"}, {"control_script"=>" @naboss_page.a(:text,\"删除\").click; @naboss_page.button(:text,\"确认\").click; ", "step_desc"=>"对第一条记录做删除操作"}, {"control_script"=>"@naboss_page.span(:class,\"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted\").click", "step_desc"=>"关闭签页"}]}]}
+[2018-05-17 16:29:20] INFO: [33m======= start to run test testcase: 2017-04-27_145753 =======[0m
+[2018-05-17 16:29:27] INFO: [34mB------ Start to run feature: add companyGuest[0m
+[2018-05-17 16:29:27] INFO: feature: {"feature_name_desc"=>" 公司宾客新增", "features_suite_name"=>"VIPROOMFeatures", "feature_name"=>"add companyGuest", "feature_steps"=>[{"control_script"=>"@naboss_page.a(:title,\"服务准备\").click", "step_desc"=>"点击服务准备链接"}, {"control_script"=>"@naboss_page.a(:title,\"公司宾客新增管理\").click", "step_desc"=>"点击公司宾客新增管理链接"}, {"control_script"=>" Watir::Wait.until{@naboss_page.a(:class,\"btn btn-default btn-xs ng-star-inserted\").exist?}; @naboss_page.button(:class,\"btn btn-primary ng-button-primary\").click ", "step_desc"=>"点击新增按钮"}, {"control_script"=>" @naboss_page.text_field(:name,\"addFluDate\").click; @naboss_page.span(:text=>\"15\").click; ", "step_desc"=>"录入表单选择航班日期为20180515"}, {"control_script"=>"@naboss_page.text_field(:name,\"addFltNum\").set \"HU7181\"", "step_desc"=>"录入表单填写航班号"}, {"control_script"=>"@naboss_page.i(:class=>\"fa fa-search\",:index=>3).click", "step_desc"=>"点击航班号放大镜查看按钮"}, {"control_script"=>"@naboss_page.a(:text,\"陈文霞\").click", "step_desc"=>"选择旅客陈文霞"}, {"control_script"=>"@naboss_page.text_field(:name,\"addpsrPosition\").set \"打手\"", "step_desc"=>"输入职务打手"}, {"control_script"=>" Watir::Wait.until{@naboss_page.a(:text,\"陈文霞\").exist?}; @naboss_page.div(:class,\"widget-footer\").button.click ", "step_desc"=>"点击提交按钮"}, {"control_script"=>"@naboss_page.span(:class,\"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted\").click", "step_desc"=>"关闭签页"}]}
+[2018-05-17 16:29:27] INFO: [36mstep_1: 点击服务准备链接[0m
+[2018-05-17 16:29:28] INFO: [32m@naboss_page.a(:title,"服务准备").click    ...    ✓[0m
+[2018-05-17 16:29:28] INFO: [36mstep_2: 点击公司宾客新增管理链接[0m
+[2018-05-17 16:29:28] INFO: [32m@naboss_page.a(:title,"公司宾客新增管理").click    ...    ✓[0m
+[2018-05-17 16:29:28] INFO: [36mstep_3: 点击新增按钮[0m
+[2018-05-17 16:29:29] INFO: [32m Watir::Wait.until{@naboss_page.a(:class,"btn btn-default btn-xs ng-star-inserted").exist?}; @naboss_page.button(:class,"btn btn-primary ng-button-primary").click     ...    ✓[0m
+[2018-05-17 16:29:29] INFO: [36mstep_4: 录入表单选择航班日期为20180515[0m
+[2018-05-17 16:29:30] INFO: [32m @naboss_page.text_field(:name,"addFluDate").click; @naboss_page.span(:text=>"15").click;     ...    ✓[0m
+[2018-05-17 16:29:30] INFO: [36mstep_5: 录入表单填写航班号[0m
+[2018-05-17 16:29:30] INFO: [32m@naboss_page.text_field(:name,"addFltNum").set "HU7181"    ...    ✓[0m
+[2018-05-17 16:29:30] INFO: [36mstep_6: 点击航班号放大镜查看按钮[0m
+[2018-05-17 16:29:30] INFO: [32m@naboss_page.i(:class=>"fa fa-search",:index=>3).click    ...    ✓[0m
+[2018-05-17 16:29:30] INFO: [36mstep_7: 选择旅客陈文霞[0m
+[2018-05-17 16:29:33] INFO: [32m@naboss_page.a(:text,"陈文霞").click    ...    ✓[0m
+[2018-05-17 16:29:33] INFO: [36mstep_8: 输入职务打手[0m
+[2018-05-17 16:29:33] INFO: [32m@naboss_page.text_field(:name,"addpsrPosition").set "打手"    ...    ✓[0m
+[2018-05-17 16:29:33] INFO: [36mstep_9: 点击提交按钮[0m
+[2018-05-17 16:29:33] INFO: [32m Watir::Wait.until{@naboss_page.a(:text,"陈文霞").exist?}; @naboss_page.div(:class,"widget-footer").button.click     ...    ✓[0m
+[2018-05-17 16:29:33] INFO: [36mstep_10: 关闭签页[0m
+[2018-05-17 16:29:33] INFO: [32m@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted").click    ...    ✓[0m
+[2018-05-17 16:29:33] INFO: [34mE------ add companyGuest
+[0m
+[2018-05-17 16:29:33] INFO: [34mB------ Start to run feature: update companyGuest[0m
+[2018-05-17 16:29:33] INFO: feature: {"feature_name_desc"=>" 公司宾客修改", "features_suite_name"=>"VIPROOMFeatures", "feature_name"=>"update companyGuest", "feature_steps"=>[{"control_script"=>"@naboss_page.a(:title,\"公司宾客新增管理\").click", "step_desc"=>"点击公司宾客新增管理链接"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrFltNum\").set \"HU7181\"", "step_desc"=>"查询表单填写航班号"}, {"control_script"=>" @naboss_page.text_field(:name=>\"fltDate\").click; @naboss_page.span(:text=>\"15\").click; ", "step_desc"=>"查询表单选择航班日期为20180515"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrCnname\").set \"陈文霞\"", "step_desc"=>"查询表单填写宾客姓名陈文霞"}, {"control_script"=>" @naboss_page.button(:class,\"btn btn-default ng-button-default search-btn-width ng-star-inserted\").click ", "step_desc"=>"点击查询按钮"}, {"control_script"=>"puts @naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text;", "expectation"=>"@naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text==\"陈文霞\";", "step_desc"=>"校验第一条记录的姓名是否为陈文霞"}, {"control_script"=>" @naboss_page.a(:text,\"修改\").click; ", "step_desc"=>"对第一条记录做修改操作"}, {"control_script"=>"@naboss_page.text_field(:name,\"addpsrPosition\").set \"杀手\"", "step_desc"=>"输入职务杀手"}, {"control_script"=>" @naboss_page.button(:text,\"保存\").click ", "step_desc"=>"点击保存按钮"}, {"control_script"=>"puts @naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text;", "expectation"=>"@naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text==\"陈文霞\";", "step_desc"=>"校验第一条记录的姓名是否为陈文霞"}, {"control_script"=>"@naboss_page.span(:class,\"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted\").click", "step_desc"=>"关闭签页"}]}
+[2018-05-17 16:29:33] INFO: [36mstep_1: 点击公司宾客新增管理链接[0m
+[2018-05-17 16:29:34] INFO: [32m@naboss_page.a(:title,"公司宾客新增管理").click    ...    ✓[0m
+[2018-05-17 16:29:34] INFO: [36mstep_2: 查询表单填写航班号[0m
+[2018-05-17 16:29:34] INFO: [32m@naboss_page.text_field(:name,"psrFltNum").set "HU7181"    ...    ✓[0m
+[2018-05-17 16:29:34] INFO: [36mstep_3: 查询表单选择航班日期为20180515[0m
+[2018-05-17 16:29:34] INFO: [32m @naboss_page.text_field(:name=>"fltDate").click; @naboss_page.span(:text=>"15").click;     ...    ✓[0m
+[2018-05-17 16:29:34] INFO: [36mstep_4: 查询表单填写宾客姓名陈文霞[0m
+[2018-05-17 16:29:35] INFO: [32m@naboss_page.text_field(:name,"psrCnname").set "陈文霞"    ...    ✓[0m
+[2018-05-17 16:29:35] INFO: [36mstep_5: 点击查询按钮[0m
+[2018-05-17 16:29:35] INFO: [32m @naboss_page.button(:class,"btn btn-default ng-button-default search-btn-width ng-star-inserted").click     ...    ✓[0m
+[2018-05-17 16:29:35] INFO: [36mstep_6: 校验第一条记录的姓名是否为陈文霞[0m
+[2018-05-17 16:29:35] INFO: [32mputs @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text;    ...    ✓[0m
+[2018-05-17 16:29:35] INFO: [36mstep_7: 对第一条记录做修改操作[0m
+[2018-05-17 16:29:36] INFO: [32m @naboss_page.a(:text,"修改").click;     ...    ✓[0m
+[2018-05-17 16:29:36] INFO: [36mstep_8: 输入职务杀手[0m
+[2018-05-17 16:29:36] INFO: [32m@naboss_page.text_field(:name,"addpsrPosition").set "杀手"    ...    ✓[0m
+[2018-05-17 16:29:36] INFO: [36mstep_9: 点击保存按钮[0m
+[2018-05-17 16:29:36] INFO: [32m @naboss_page.button(:text,"保存").click     ...    ✓[0m
+[2018-05-17 16:29:36] INFO: [36mstep_10: 校验第一条记录的姓名是否为陈文霞[0m
+[2018-05-17 16:29:38] INFO: [32mputs @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text;    ...    ✓[0m
+[2018-05-17 16:29:38] INFO: [36mstep_11: 关闭签页[0m
+[2018-05-17 16:29:38] INFO: [32m@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted").click    ...    ✓[0m
+[2018-05-17 16:29:38] INFO: [34mE------ update companyGuest
+[0m
+[2018-05-17 16:29:38] INFO: [34mB------ Start to run feature: delete companyGuest[0m
+[2018-05-17 16:29:38] INFO: feature: {"feature_name_desc"=>" 公司宾客删除", "features_suite_name"=>"VIPROOMFeatures", "feature_name"=>"delete companyGuest", "feature_steps"=>[{"control_script"=>"@naboss_page.a(:title,\"公司宾客新增管理\").click", "step_desc"=>"点击公司宾客新增管理链接"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrFltNum\").set \"HU7181\"", "step_desc"=>"查询表单填写航班号"}, {"control_script"=>" @naboss_page.text_field(:name=>\"fltDate\").click; @naboss_page.span(:text=>\"15\").click; ", "step_desc"=>"查询表单选择航班日期为20180515"}, {"control_script"=>"@naboss_page.text_field(:name,\"psrCnname\").set \"陈文霞\"", "step_desc"=>"查询表单填写宾客姓名陈文霞"}, {"control_script"=>" @naboss_page.button(:class,\"btn btn-default ng-button-default search-btn-width ng-star-inserted\").click ", "step_desc"=>"点击查询按钮"}, {"control_script"=>"puts @naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text;", "expectation"=>"@naboss_page.div(:class=>\"ui-table-scrollable-wrapper ng-star-inserted\").td(:index=>4).text==\"陈文霞\";", "step_desc"=>"校验第一条记录的姓名是否为陈文霞"}, {"control_script"=>" @naboss_page.a(:text,\"删除\").click; @naboss_page.button(:text,\"确认\").click; ", "step_desc"=>"对第一条记录做删除操作"}, {"control_script"=>"@naboss_page.span(:class,\"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted\").click", "step_desc"=>"关闭签页"}]}
+[2018-05-17 16:29:38] INFO: [36mstep_1: 点击公司宾客新增管理链接[0m
+[2018-05-17 16:29:38] INFO: [32m@naboss_page.a(:title,"公司宾客新增管理").click    ...    ✓[0m
+[2018-05-17 16:29:38] INFO: [36mstep_2: 查询表单填写航班号[0m
+[2018-05-17 16:29:39] INFO: [32m@naboss_page.text_field(:name,"psrFltNum").set "HU7181"    ...    ✓[0m
+[2018-05-17 16:29:39] INFO: [36mstep_3: 查询表单选择航班日期为20180515[0m
+[2018-05-17 16:29:39] INFO: [32m @naboss_page.text_field(:name=>"fltDate").click; @naboss_page.span(:text=>"15").click;     ...    ✓[0m
+[2018-05-17 16:29:39] INFO: [36mstep_4: 查询表单填写宾客姓名陈文霞[0m
+[2018-05-17 16:29:39] INFO: [32m@naboss_page.text_field(:name,"psrCnname").set "陈文霞"    ...    ✓[0m
+[2018-05-17 16:29:39] INFO: [36mstep_5: 点击查询按钮[0m
+[2018-05-17 16:29:39] INFO: [32m @naboss_page.button(:class,"btn btn-default ng-button-default search-btn-width ng-star-inserted").click     ...    ✓[0m
+[2018-05-17 16:29:39] INFO: [36mstep_6: 校验第一条记录的姓名是否为陈文霞[0m
+[2018-05-17 16:29:40] INFO: [32mputs @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").td(:index=>4).text;    ...    ✓[0m
+[2018-05-17 16:29:40] INFO: [36mstep_7: 对第一条记录做删除操作[0m
+[2018-05-17 16:29:40] INFO: [32m @naboss_page.a(:text,"删除").click; @naboss_page.button(:text,"确认").click;     ...    ✓[0m
+[2018-05-17 16:29:40] INFO: [36mstep_8: 关闭签页[0m
+[2018-05-17 16:29:40] INFO: [32m@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error ng-star-inserted").click    ...    ✓[0m
+[2018-05-17 16:29:40] INFO: [34mE------ delete companyGuest
+[0m
+[2018-05-17 16:29:40] INFO: [33m============ all features have been executed. ============[0m
+[2018-05-17 16:29:40] INFO: [33m
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m

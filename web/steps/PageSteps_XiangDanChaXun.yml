@@ -1,0 +1,24 @@
+PageSteps_XiangDanChaXun:
+  click link XiangDanChaXun:
+    control_script: '@naboss_page.link(:id,"BIL1803").click'
+
+  set text_field.serial_number value XiangDanChaXun_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.XiangDanChaXun.SerialNumber'
+    control_data: config.TestEnvParam.XiangDanChaXun.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"queryBeforeButt").click'
+
+  check password:
+    control_script: '
+      @naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"_EnterPass_USER_PASS").set config.TestEnvParam.XiangDanChaXun.Password;
+      @naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"OK").click;
+    '
+    control_data: config.TestEnvParam.XiangDanChaXun.Password
+
+  table.Voice_BILL_Summary should exist:
+    control_script: ';'
+    expectation:  '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"Voice_BILL_Summary").[](1).[](0).exist?'
+
+
+

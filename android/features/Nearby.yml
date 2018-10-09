@@ -1,0 +1,4 @@
+---
+NearbyFeatures:
+  check Nearby module:
+    - NearbySteps | enter Nearby page

@@ -1,0 +1,40 @@
+---
+testcase_name: 2017-04-27_145753
+features_suite:
+- feature_name_desc: " 公司宾客新增"
+  features_suite_name: VIPROOMFeatures
+  feature_name: add companyGuest
+  feature_steps:
+  - control_script: '@naboss_page.a(:title,"服务准备").click'
+    step_desc: 点击服务准备链接
+    step_index: 0
+    step_ruslt: passed
+  - control_script: '@naboss_page.a(:title,"公司宾客新增管理").click'
+    step_desc: 点击公司宾客新增管理链接
+    step_index: 1
+    step_ruslt: passed
+  - control_script: ' Watir::Wait.until{@naboss_page.a(:class,"btn btn-default btn-xs
+      ng-star-inserted").exist?}; @naboss_page.button(:class,"btn btn-primary ng-button-primary").click '
+    step_desc: 点击新增按钮
+    step_index: 2
+    screenshort_url: D:/WorkSpace/AutoTester/results/2018-05-17_151204/screenshots/2018-05-17_151244.bmp
+  - control_script: ' @naboss_page.text_field(:name,"addFluDate").click; @naboss_page.select_list(:class,"ui-datepicker-year
+      ng-tns-c7-139 ng-star-inserted").select("2018"); @naboss_page.select_list(:class,"ui-datepicker-month
+      ng-tns-c7-139 ng-star-inserted").select("5月"); @naboss_page.span(:text=>"15").click; '
+    step_desc: 录入表单选择航班日期为20180515
+  - control_script: '@naboss_page.text_field(:name,"addFltNum").set "HU7181"'
+    step_desc: 录入表单填写航班号
+  - control_script: '@naboss_page.i(:class,"fa fa-search").click'
+    step_desc: 点击航班号放大镜查看按钮
+  - control_script: '@naboss_page.a(:text,"陈文霞").click'
+    step_desc: 选择旅客陈文霞
+  - control_script: '@naboss_page.text_field(:name,"addpsrPosition").set "打手"'
+    step_desc: 输入职务打手
+  - control_script: '@naboss_page.div(:class,"widget-footer").button.click'
+    step_desc: 点击提交按钮
+  - control_script: '@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error
+      ng-star-inserted").click'
+    step_desc: 关闭签页
+  feature_ruslt: failed
+  error_info: !ruby/exception:Watir::Wait::TimeoutError
+    message: timed out after 30 seconds

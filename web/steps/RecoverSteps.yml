@@ -1,0 +1,24 @@
+---
+RecoverSteps:
+  #关闭浏览器
+  normal_recover:
+    control_script: '
+    clickAlterAccetp(@naboss_page);
+    system("wmic process Where name=\"chrome.exe\" call terminate");
+    @naboss_page = Watir::Browser.new :chrome;
+    @naboss_page.goto (config.TestEnvParam.URL);
+    @naboss_page.text_field(:id, "email").set config.TestEnvParam.UserName;
+    @naboss_page.text_field(:id, "password").set config.TestEnvParam.Password;
+    @naboss_page.button(:text,"登 录").click;
+    '
+
+  #初始化测试环境
+  click confirm business prompt with index 0:
+    control_script: "
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id => 'wade_msgbox_11_btns').a.click
+    "
+  #使用测试账户登陆系统
+  click confirm business prompt with index 1:
+    control_script: "
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id => 'wade_msgbox_11_btns').a.click
+    "

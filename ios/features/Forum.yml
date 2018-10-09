@@ -1,0 +1,4 @@
+---
+ForumFeatures:
+  check Forum module:
+    - ForumSteps | enter Forum page

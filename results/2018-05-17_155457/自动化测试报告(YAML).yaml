@@ -1,0 +1,48 @@
+---
+testcase_name: 2017-04-27_145753
+features_suite:
+- feature_name_desc: " 公司宾客新增"
+  features_suite_name: VIPROOMFeatures
+  feature_name: delete companyGuest
+  feature_steps:
+  - control_script: '@naboss_page.a(:title,"服务准备").click'
+    step_desc: 点击服务准备链接
+    step_index: 0
+    step_ruslt: passed
+  - control_script: '@naboss_page.a(:title,"公司宾客新增管理").click'
+    step_desc: 点击公司宾客新增管理链接
+    step_index: 1
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"psrFltNum").set "HU7181"'
+    step_desc: 查询表单填写航班号
+    step_index: 2
+    step_ruslt: passed
+  - control_script: ' @naboss_page.text_field(:name=>"fltDate").click; @naboss_page.span(:text=>"15").click; '
+    step_desc: 查询表单选择航班日期为20180515
+    step_index: 3
+    step_ruslt: passed
+  - control_script: '@naboss_page.text_field(:name,"psrCnname").set "陈文霞"'
+    step_desc: 查询表单填写宾客姓名陈文霞
+    step_index: 4
+    step_ruslt: passed
+  - control_script: ' @naboss_page.button(:class,"btn btn-default ng-button-default
+      search-btn-width ng-star-inserted").click '
+    step_desc: 点击查询按钮
+    step_index: 5
+    step_ruslt: passed
+  - control_script: puts @naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").table.td(:index=>4).text;
+    expectation: '@naboss_page.div(:class=>"ui-table-scrollable-wrapper ng-star-inserted").table.td(:index=>4).text=="
+      陈文霞";'
+    step_desc: 校验第一条记录的姓名是否为陈文霞
+    step_index: 6
+    screenshort_url: D:/WorkSpace/AutoTester/results/2018-05-17_155457/screenshots/2018-05-17_155637.bmp
+  - control_script: ' @naboss_page.button(:text,"删除").click; @naboss_page.button(:text,"确认").click; '
+    step_desc: 对第一条记录做删除操作
+  - control_script: '@naboss_page.span(:class,"ui-tabview-close fa icon-error ui-tabview-icon-error
+      ng-star-inserted").click'
+    step_desc: 关闭签页
+  feature_ruslt: failed
+  error_info: !ruby/exception:Watir::Exception::UnknownObjectException
+    message: 'timed out after 30 seconds, waiting for #<Watir::TableDataCell: located:
+      false; {:class=>"ui-table-scrollable-wrapper ng-star-inserted", :tag_name=>"div"}
+      --> {:tag_name=>"table"} --> {:index=>4, :tag_name=>"td"}> to be located'

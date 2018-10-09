@@ -1,0 +1,145 @@
+---
+TestEnvParam:
+  URL: http://192.168.4.28/#/auth/login
+  UserName: hakgbs
+  Password: 123456
+  Description: 环境参数
+
+
+  CRMDataBase:
+    Account: UOP_CRM1
+    Password: UOP_CRM1J2
+    DataBase: j2ee_crmtest
+    Description: CRM数据库参数
+  BaoTing:
+    SerialNumber: 13036087023
+    Description: 报停
+  BaoKai:
+    SerialNumber: 13036087023
+    Description: 报开
+  GuaShi:
+    SerialNumber: 13036087023
+    Description: 挂失
+  JuFangTingJi:
+    SerialNumber: 13036087023
+    Description: 局方停机
+  JuFangKaiJi:
+    SerialNumber: 13036087023
+    Description: 局方开机
+  QinQingHaoMaYeWuBanLi:
+    SerialNumberAUTH: 13876525082
+    SerialNumberFMY: 13036087023
+    Description: 亲情号码业务办理
+  ZhangHuZiLiaoBianGeng:
+    TestAccountName: 杨腾
+    Remark: 测试
+    SerialNumberAUTH: 13876525082
+    Description: 账户资料变更
+  YinXiaoHuoDongShouLi:
+    SerialNumberAUTH: 13876525082
+    Description: 营销活动受理
+  YeWuFanXiao:
+    Description: 业务返销
+    YeWuFanXiao_FeiQianYueLei:
+      Serial_number: 13876525082
+      Description: 营销活动业务返销
+  KeHuZiLiaoZongHeChaXun:
+    SerialNumber: 13876525082
+    Description: 客户资料综合查询
+  KeHuZiLiaoBianGeng:
+    SerialNumber: 13876525082
+    Description: 客户资料变更
+  HuaFeiShouQu_TangTanZhuanYong:
+    SerialNumber: 18289645400
+    Description: 话费收取探测专用
+  GeRenXianJinFaPiaoDaYin:
+    SerialNumber: 13876525082
+    Password: 123412
+    print_day: 201701
+    Description: 个人现金发票打印
+  HuaFeiFanXiao:
+    SerialNumber: 18289645400
+    Description: 话费返销
+  JiTuanKeHuShouFei_YinGaiZeng:
+    GroupId: 8989859425
+    Acct_id: 1115102705809820
+    SerialNumber: '09955227323'
+    Description: 集团客户收费（营改增）
+  JiTuanXianJinFaPiaoDaYin:
+    GroupId: 8989859425
+    Acct_id: 1115102705809820
+    SerialNumber: '09955227323'
+    print_day: 201701
+    Description: 集团现金发票打印
+  JiTuanPuTongFaPiaoZuoFei:
+    SerialNumber: '09955227323'
+    Description: 集团普通发票作废
+  JiaoFeiShouFeiChaXun:
+    SerialNumber: 18289645400
+    Description: 缴费收费查询
+  YongHuTaoCanShiYongLiangChaXun:
+    SerialNumber: 18289645400
+    Description: 用户套餐使用量查询
+  XinBanYongHuZhangDanDaYin:
+    SerialNumber: 18289645400
+    Description: 新版用户帐单打印
+  XiangDanChaXun:
+    SerialNumber: 18289645400
+    Password: 123412
+    Description: 详单查询
+  GeRenYongHuKaiHu:
+    Description: 个人用户开户
+    KaiHu_QuanQiuTong:
+      Description: 全球通开户
+      SerialNumber: 18889101305
+      SIM_CARD_NO: 898600B8211490529908
+      PSPT_ID: 827173172
+      CUST_NAME: cesd
+      PSPT_ADDR: 测试地址测试地址
+      PHONE: 18889745933
+      PAY_NAME: 杨腾
+      Int_PASSWD: 123412
+  ChanPinBianGeng:
+    Description: 产品变更
+    DingGouLaiDianXianShi:
+      SerialNumber: 13976764030
+      Description: 订购来电显示
+  GPRS_YouHuiBianGeng:
+    SerialNumber: 13976764030
+    Description: GPRS优惠变更
+  JiTuanZhangHuXinZeng:
+    GROUP_ID: 8989859425
+    ACCT_ID: 1117050206260821
+  JiTuanChanPinXinZeng:
+    Description: 集团产品新增
+    CaiLing:
+      Description: 集团彩铃
+      GROUP_ID: 8989859425
+      CONTRACT_ID: 2017040100093608|合同测试
+      MANAGER_NAME: 杨腾
+      MANAGER_PHONE: 18889745933
+      MANAGER_INFO: test
+      PASSWORD: 123412
+      SerialNumber: '09955178265'
+  JiTuanChanPinChengYuanXinZeng:
+    Description: 集团产品成员新增
+    SerialNumber: 13976764030
+  JiTuanChanPinChengYuanZiLiaoXiuGai:
+    Description: 集团产品成员资料修改
+    CaiLing:
+      SerialNumber: 13976764030
+  JiTuanChengYuanFuFeiGuanXiBianGeng:
+    Description: 集团成员付费关系修改
+    CaiLing:
+      SerialNumber: 13976764030
+  ZiVPMNJiTuanXinZeng:
+    Description: 子VPMN集团新增
+    cond_SERIAL_NUMBER: 1
+    SUB_SerialNumber: 1
+  ZiVPMNJiTuanZhuXiao:
+    Description: 子VPMN集团注销
+    cond_SERIAL_NUMBER: 1
+  MuVPMNWaiWangHaoMaXinZeng:
+    Description: 母VPMN网外号码新增
+    cond_SERIAL_NUMBER: 1
+    SUB_SerialNumber: 1

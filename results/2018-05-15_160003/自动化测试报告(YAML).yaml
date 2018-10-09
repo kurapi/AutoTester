@@ -1,0 +1,16 @@
+---
+testcase_name: 2017-04-27_145753
+features_suite:
+- feature_name_desc: " 集团账户新增"
+  features_suite_name: VIPROOMFeatures
+  feature_name: insert company client
+  feature_steps:
+  - control_script: '@naboss_page.a(:title,"服务准备").click'
+    step_desc: click link server prepare
+    step_index: 0
+    step_ruslt: passed
+  - control_script: '@naboss_page.a(:title,"公司宾客新增管理").click'
+    step_desc: click link insert company client
+    step_index: 1
+    step_ruslt: passed
+  feature_ruslt: passed

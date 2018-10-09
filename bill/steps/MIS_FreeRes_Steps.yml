@@ -1,0 +1,70 @@
+---
+MIS_FreeRes_Steps:
+  #初始化测试环境
+  init MIS_FreeRes Env:
+    control_script: '@BillTestDriver=BillTestDriver.new("SMSFreeRes")'
+
+  creat Note bill:
+    control_script: '
+    @BillTestDriver.creatMISCbill;
+    step["step_print"]="测试话单："+@BillTestDriver.bakFile;
+    '
+
+  get BDS UserBillInfo befor fileTransferServer:
+    control_script: '
+    @BillTestDriver.tempS1=@BillTestDriver.getBDSData;
+    step["step_print"]="执行话单前的账单数据："+@BillTestDriver.tempS1;
+    '
+  get BDS DiscntUse befor fileTransferServer:
+    control_script: '
+    @BillTestDriver.resUsed_Bef=@BillTestDriver.getBDSResData("100091");
+    step["step_print"]="执行话单前的免费资源数据："+@BillTestDriver.resUsed_Bef.to_s;
+    '
+
+  bill file Transfer Server:
+    control_script: '
+    @BillTestDriver.fileTransferServer;
+    '
+
+  calculate preferential path:
+    control_script: '
+    @BillTestDriver.diffFreeCode_misc;
+    '
+
+  get BDS UserBillInfo after fileTransferServer:
+    control_script: '
+    @BillTestDriver.tempS2=@BillTestDriver.getBDSData;
+    step["step_print"]="执行话单后的账单数据："+@BillTestDriver.tempS2.to_s;
+    '
+
+  get bill use 14602:
+    control_script: '
+    @BillTestDriver.getBillUser(@BillTestDriver.tempS1,@BillTestDriver.tempS2,"14602");
+    '
+
+  check preferential path:
+    control_script: '
+      @BillTestDriver.free_code1="0/1;2";
+      step["step_print"]= "预期结果:优惠轨迹#{@BillTestDriver.free_code1.to_s}";
+      step["step_print"]+= "<br>实际结果:优惠轨迹#{@BillTestDriver.free_code2.to_s}";
+      if @BillTestDriver.free_code1.to_s==@BillTestDriver.free_code2.to_s then
+        step["step_print"]+= "<br>优惠轨迹和预期结果一致"
+      else
+        step["step_print"]+= "<br>优惠轨迹和预期结果不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.free_code1==@BillTestDriver.free_code2'
+
+  check bill result:
+    control_script: '
+      @BillTestDriver.redisStrs="14602 200 200 200";
+      step["step_print"]= "预期账单#{@BillTestDriver.redisStrs.to_s}";
+      step["step_print"]+= "<br>查询账单#{@BillTestDriver.bILL_USER_TEST.to_s}";
+
+      if @BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs then
+        step["step_print"]+= "<br>内存库查询账单结果与预期一致"
+      else
+        step["step_print"]+= "<br>内存库查询账单结果与预期不一致"
+      end;
+    '
+    expectation: '@BillTestDriver.bILL_USER_TEST == @BillTestDriver.redisStrs'

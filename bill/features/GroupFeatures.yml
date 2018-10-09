@@ -1,0 +1,172 @@
+---
+GroupFeatures:
+  JiTuanZhangHuXinZeng:
+    - UserSteps | click link group business
+    - PageSteps_JiTuanZhangHuGuanLi | click link JiTuanZhangHuGuanLi
+    - PageSteps_JiTuanZhangHuGuanLi | set text_field.GROUP_ID_NAME value JiTuanZhangHuXinZeng_GROUP_ID
+    - PageSteps_JiTuanZhangHuGuanLi | click button.bcreateTop
+    - PageSteps_JiTuanZhangHuGuanLi | click button.bcreate
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - PageSteps_JiTuanZhangHuGuanLi | record JiTuanZhangHuXinZeng_acctID
+    - SettingsSteps | clean test env
+  JiTuanChanPinXinZeng_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChanPinXinZeng | click link JiTuanChanPinXinZeng
+    - PageSteps_JiTuanChanPinXinZeng | set text_field.GROUP_ID_NAME value JiTuanChanPinXinZeng_CaiLing_GROUP_ID
+    - PageSteps_JiTuanChanPinXinZeng | click link.text with BiaoZhunChanPin
+    - PageSteps_JiTuanChanPinXinZeng | click link.text with JiTuanCaiLing
+    - PageSteps_JiTuanChanPinXinZeng | select select_list.SELE_CONTRACTPRODUCT_CONTRACT_ID value with JiTuanChanPinXinZeng_CaiLing_CONTRACT_ID
+    - PageSteps_JiTuanChanPinXinZeng | click button.bnext
+    - PageSteps_JiTuanChanPinXinZeng | click div.mytab_tab where text like ChanPinCanShuXinXi
+    - PageSteps_JiTuanChanPinXinZeng | set text_field.pam_MANAGER_NAME value JiTuanChanPinXinZeng_CaiLing_MANAGER_NAME
+    - PageSteps_JiTuanChanPinXinZeng | set text_field.pam_MANAGER_PHONE value JiTuanChanPinXinZeng_CaiLing_MANAGER_PHONE
+    - PageSteps_JiTuanChanPinXinZeng | set text_field.pam_MANAGER_INFO value JiTuanChanPinXinZeng_CaiLing_MANAGER_INFO
+    - PageSteps_JiTuanChanPinXinZeng | set text_field.pam_PASSWORD value JiTuanChanPinXinZeng_CaiLing_PASSWORD
+    - PageSteps_JiTuanChanPinXinZeng | click div.mytab_tab where text like ZhangHuXinXi
+    - PageSteps_JiTuanChanPinXinZeng | select select_list.acct_ACCT_ID value with JiTuanZhangHuXinZeng_acctID
+    - PageSteps_JiTuanChanPinXinZeng | click button.bnext
+    - PageSteps_JiTuanChanPinXinZeng | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - PageSteps_JiTuanChanPinXinZeng | record JiTuanChanPinXinZeng_CaiLing_productID
+    - SettingsSteps | clean test env
+  JiTuanChanPinChengYuanXinZeng_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | click link JiTuanChanPinChengYuanXinZeng
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | set text_field.cond_GROUP_SERIAL_NUMBER value JiTuanChanPinXinZeng_CaiLing_productID
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | set text_field.PAY_PLAN_SEL_PLAN_TYPE value JiTuanChanPinXinZeng_CaiLing_SerialNumber
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | select select_list.PAY_PLAN_SEL_PLAN_TYPE value with GeRenFuFei
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | click button.bnext
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | select select_list.ROLE_CODE_B value with PuTongChengYuan
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | click button.bnext
+    - PageSteps_JiTuanChanPinChengYuanXinZeng | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  JiTuanChanPinChengYuanZiLiaoXiuGai_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | click link JiTuanChanPinChengYuanZiLiaoXiuGai
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | set text_field.editBaseDatum value JiTuanChanPinChengYuanZiLiaoXiuGai_CaiLing_SerialNumber
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | click table.tr where text like CaiLing
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | click button.bnext
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | click div.mytab_tab where text like ChanPinCanShuXinXi
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | click element.CANCEL_LING
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | click button.bnext
+    - PageSteps_JiTuanChanPinChengYuanZiLiaoXiuGai | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  JiTuanChengYuanFuFeiGuanXiBianGeng_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng | click link JiTuanChengYuanFuFeiGuanXiBianGeng
+    - PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng | set text_field.editBaseDatum value JiTuanChengYuanFuFeiGuanXiBianGeng_CaiLing_SerialNumber
+    - PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng | click table.value with JiTuanChanPinXinZeng_CaiLing_productID
+    - PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng | click button.bnext
+    - PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng | select select_list.PAY_PLAN_SEL_PLAN_TYPE value with group
+    - PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng | click button.bnext
+    - PageSteps_JiTuanChengYuanFuFeiGuanXiBianGeng | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  ZiVPMNJiTuanXinZeng:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_ZiVPMNJiTuanXinZeng | click link ZiVPMNJiTuanXinZeng
+    - PageSteps_ZiVPMNJiTuanXinZeng | set text_field.cond_SERIAL_NUMBER value ZiVPMNJiTuanXinZeng_cond_SerialNumber and send enterKey
+    - PageSteps_ZiVPMNJiTuanXinZeng | set text_field.SUB_SERIAL_NUMBER value ZiVPMNJiTuanXinZeng_SUB_SerialNumber  and send enterKey
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  ZiVPMNJiTuanZhuXiao:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_ZiVPMNJiTuanZhuXiao | click link ZiVPMNJiTuanZhuXiao
+    - PageSteps_ZiVPMNJiTuanZhuXiao | set text_field.cond_SERIAL_NUMBER value ZiVPMNJiTuanZhuXiao_cond_SerialNumber and send enterKey
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  MuVPMNWaiWangHaoMaXinZeng:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_MuVPMNWaiWangHaoMaXinZeng | click link MuVPMNWaiWangHaoMaXinZeng
+    - PageSteps_MuVPMNWaiWangHaoMaXinZeng | set text_field.cond_SERIAL_NUMBER value MuVPMNWaiWangHaoMaXinZeng_cond_SerialNumber and send enterKey
+    - PageSteps_MuVPMNWaiWangHaoMaXinZeng | set text_field.OUT_SERIAL_NUMBER value MuVPMNWaiWangHaoMaXinZeng_OUT_SerialNumber
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  MuVPMNWaiWangHaoMaZhuXiao:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_MuVPMNWaiWangHaoMaZhuXiao | click link MuVPMNWaiWangHaoMaZhuXiao
+    - PageSteps_MuVPMNWaiWangHaoMaZhuXiao | set text_field.cond_SERIAL_NUMBER value MuVPMNWaiWangHaoMaXinZeng_cond_SerialNumber and send enterKey
+    - PageSteps_MuVPMNWaiWangHaoMaZhuXiao | set text_field.OUT_SERIAL_NUMBER value MuVPMNWaiWangHaoMaXinZeng_OUT_SerialNumber
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  JiTuanChanPinFuFeiGuanXiXiuGai_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai | click link JiTuanChanPinFuFeiGuanXiXiuGai
+    - PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai | set text_field.cond_GROUP_SERIAL_NUMBER value JiTuanChanPinFuFeiGuanXiXiuGai_SerialNumber and send enterKey
+    - PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai | click button.bnext
+    - PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai | click checkbox.c_table.2.0
+    - PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai | click button.bnext
+    - PageSteps_JiTuanChanPinFuFeiGuanXiXiuGai | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  JiTuanChanPinZiLiaoXiuGai_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChanPinZiLiaoXiuGai | click link JiTuanChanPinZiLiaoXiuGai
+    - PageSteps_JiTuanChanPinZiLiaoXiuGai | set text_field.cond_GROUP_SERIAL_NUMBER value JiTuanChanPinFuFeiGuanXiXiuGai_SerialNumber and send enterKey
+    - PageSteps_JiTuanChanPinZiLiaoXiuGai | click button.bupdateCont to check contract frame
+    - PageSteps_JiTuanChanPinZiLiaoXiuGai | click button.bnext
+    - PageSteps_JiTuanChanPinZiLiaoXiuGai | click button.bnext
+    - PageSteps_JiTuanChanPinZiLiaoXiuGai | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  JiTuanChanPinChengYuanZhuXiao_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChanPinChengYuanZhuXiao | click link JiTuanChanPinChengYuanZhuXiao
+    - PageSteps_JiTuanChanPinChengYuanZhuXiao | set text_field.cond_SERIAL_NUMBER value JiTuanChanPinChengYuanZhuXiao_SerialNumber and send enterKey
+    - PageSteps_JiTuanChanPinChengYuanZhuXiao | click table.value with JiTuanChanPinXinZeng_CaiLing_productID
+    - PageSteps_JiTuanChanPinChengYuanZhuXiao | click button.bnext
+    - UserSteps | click Alter Accetp
+    - PageSteps_JiTuanChanPinChengYuanZhuXiao | set text_field.parm_REMARK value test
+    - PageSteps_JiTuanChanPinChengYuanZhuXiao | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env
+  JiTuanChanPinZhuXiao_CaiLing:
+    - UserSteps | click link group business
+    - UserSteps | click link group daily business
+    - PageSteps_JiTuanChanPinZhuXiao | click link JiTuanChanPinZhuXiao
+    - PageSteps_JiTuanChanPinZhuXiao| set text_field.cond_GROUP_SERIAL_NUMBER value JiTuanChanPinFuFeiGuanXiXiuGai_SerialNumber and send enterKey
+    - PageSteps_JiTuanChanPinZhuXiao | click button.bnext
+    - PageSteps_JiTuanChanPinZhuXiao| select select_list.param_REMOVE_REASON value badService
+    - PageSteps_JiTuanChanPinZhuXiao| set text_field.param_REMARK value test
+    - PageSteps_JiTuanChanPinZhuXiao | click button.bnext
+    - UserSteps | sumbit trade normal
+    - UserSteps | get order_id normal
+    - UserSteps | check order
+    - SettingsSteps | clean test env

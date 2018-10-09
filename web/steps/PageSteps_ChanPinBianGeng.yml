@@ -1,0 +1,37 @@
+PageSteps_ChanPinBianGeng:
+  click link ChanPinBianGeng:
+    control_script: '@naboss_page.link(:id,"crm9251").click'
+
+  set text_field.serial_number value ChanPinBianGeng_DingGouLaiDianXianShi_serial_number:
+    control_script: '@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).text_field(:id,"AUTH_SERIAL_NUMBER").set config.TestEnvParam.ChanPinBianGeng.DingGouLaiDianXianShi.SerialNumber'
+    control_data: config.TestEnvParam.ChanPinBianGeng.DingGouLaiDianXianShi.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AUTH_SUBMIT_BTN").click'
+
+  select div.packageList where title like servicePackage:
+    control_script: '@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).div(:id,"packageList").ul(:id,"packages").li(:title,"10001627:服务包").click'
+
+  select div.packageList where title like discntPackage:
+    control_script: '@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).div(:id,"packageList").ul(:id,"packages").li(:title,"10001629:优惠包").click'
+
+  set checkbox.PE_S_23:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).checkbox(:id,"PE_S_23").set'
+
+  set checkbox.PE_D_860:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).checkbox(:id,"PE_D_860").set'
+
+  click checkbox.PE_S_23:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).checkbox(:value,"23").click'
+
+  click checkbox.PE_D_860:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).checkbox(:value,"860").click'
+
+  click button.AddChoiceButton:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AddChoiceButton").click'
+
+  click button.wade_msgbox_59_btns:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"wade_msgbox_59_btns").element(:class,/e_button/).click'
+
+
+

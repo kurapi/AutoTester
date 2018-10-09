@@ -1,0 +1,55 @@
+PageSteps_JiTuanChanPinXinZeng:
+  #点击集团产品新增菜单按钮
+  click link JiTuanChanPinXinZeng:
+    control_script: '@naboss_page.link(:id,"crm8210").click'
+
+  set text_field.GROUP_ID_NAME value JiTuanChanPinXinZeng_CaiLing_GROUP_ID:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").text_field(:id,"GROUP_ID_NAME").set config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.GROUP_ID;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.GROUP_ID
+
+  click link.text with BiaoZhunChanPin:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").link(:text,"标准产品").click'
+
+  click link.text with JiTuanCaiLing:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").a(:text,"集团彩铃").click'
+
+  select select_list.SELE_CONTRACTPRODUCT_CONTRACT_ID value with JiTuanChanPinXinZeng_CaiLing_CONTRACT_ID:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"editBaseDatum").select_list(:id,"SELE_CONTRACTPRODUCT_CONTRACT_ID").select config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.CONTRACT_ID'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.CONTRACT_ID
+
+  click button.bnext:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).a(:id,"bnext").click'
+
+  click div.mytab_tab where text like ChanPinCanShuXinXi:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").div(:id,"mytab_tab").element(:text,"产品参数信息").click'
+
+  click div.mytab_tab where text like ZhangHuXinXi:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").div(:id,"mytab_tab").element(:text,"账户信息").click'
+
+  set text_field.pam_MANAGER_NAME value JiTuanChanPinXinZeng_CaiLing_MANAGER_NAME:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").text_field(:id,"pam_MANAGER_NAME").set config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.MANAGER_NAME'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.MANAGER_NAME
+
+  set text_field.pam_MANAGER_PHONE value JiTuanChanPinXinZeng_CaiLing_MANAGER_PHONE:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").text_field(:id,"pam_MANAGER_PHONE").set config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.MANAGER_PHONE'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.MANAGER_PHONE
+
+  set text_field.pam_MANAGER_INFO value JiTuanChanPinXinZeng_CaiLing_MANAGER_INFO:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").text_field(:id,"pam_MANAGER_INFO").set config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.MANAGER_INFO'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.MANAGER_INFO
+
+  set text_field.pam_PASSWORD value JiTuanChanPinXinZeng_CaiLing_PASSWORD:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").text_field(:id,"pam_PASSWORD").set config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.PASSWORD'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.PASSWORD
+
+  select select_list.acct_ACCT_ID value with JiTuanZhangHuXinZeng_acctID:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id,"chooseProductElement").select_list(:id,"acct_ACCT_ID").select_value ((config.TestEnvParam.JiTuanZhangHuXinZeng.ACCT_ID).to_s)'
+    control_data: config.TestEnvParam.JiTuanZhangHuXinZeng.ACCT_ID
+
+  record JiTuanChanPinXinZeng_CaiLing_productID:
+    control_script: 'writeConfig "config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.SerialNumber",(select_SerialNumber_from_orderID @order_id)'
+    control_data: config.TestEnvParam.JiTuanChanPinXinZeng.CaiLing.SerialNumber
+

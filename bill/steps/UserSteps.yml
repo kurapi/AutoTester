@@ -1,0 +1,99 @@
+---
+UserSteps:
+  #点击主业务辅助菜单栏，CRM,切换计费账务菜单
+  change workspace AccountPage:
+    control_script: '
+      @naboss_page.a(:id,"nav_subsys_current").click;
+      @naboss_page.div(:id,"m_header").div(:class,"fn").div(:id,"nav_subsys").element(:id,"nav_subsys_opt").link(:text,"计费账务").click;
+    '
+
+  #点击主业务辅助菜单栏，计费账务,切换CRM菜单
+  change workspace CRMPage:
+    control_script: '
+      @naboss_page.div(:id,"m_header").div(:class,"fn").div(:id,"nav_subsys").link(:id,"nav_subsys_current").click;
+      @naboss_page.div(:id,"m_header").div(:class,"fn").div(:id,"nav_subsys").element(:id,"nav_subsys_opt").link(:text,"CRM").click;
+    '
+
+  #点击个人业务菜单栏
+  click link person business:
+    control_script: '@naboss_page.link(:text,"个人业务").click'
+
+  click link group business:
+    control_script: '@naboss_page.link(:text,"集团业务").click'
+
+  #点击帐务管理菜单栏
+  click link AccountingManagement:
+    control_script: '@naboss_page.link(:text,"帐务管理").click'
+
+  click link other business:
+    control_script: '@naboss_page.link(:text,"其他业务类").click'
+
+  click link special business:
+    control_script: '@naboss_page.link(:text,"特殊业务类").click'
+
+  click link query business:
+    control_script: '@naboss_page.link(:text,"查询类").click'
+
+  #点击日常业务菜单栏
+  click link daily business:
+    control_script: '@naboss_page.div(:id,"subnav_crm9000").link(:text,"日常业务").click'
+
+  click link creatAcount business:
+    control_script: '@naboss_page.div(:id,"subnav_crm9000").link(:text,"开户业务").click'
+
+  #点击账务查询菜单栏
+  click link AccountQuery:
+    control_script: '
+    @naboss_page.div(:class,"m_subnav").link(:text,"帐务查询").click;
+    '
+
+  click link ChargeManagement:
+    control_script: '@naboss_page.div(:class,"m_subnav").link(:text,"收费管理").click'
+
+  click link BillManagement:
+    control_script: '@naboss_page.div(:class,"m_subnav").link(:text,"票据管理").click'
+
+  click link ListQuery:
+    control_script: '@naboss_page.div(:class,"m_subnav").link(:text,"清单查询").click'
+
+  click link AccountingGroup:
+    control_script: '@naboss_page.div(:id,"subnav_content_BIL1000").link(:text,"集团业务").click'
+
+  click link AccountingQuery:
+    control_script: '@naboss_page.div(:class,"m_subnav").link(:text,"帐务查询").click'
+
+  #集团业务菜单
+  click link group daily business:
+    control_script: '@naboss_page.div(:id,"subnav_crm8000").div(:id,"subnav_content_crm8000").div(:class,"root").link(:text,"日常业务").click'
+
+  #点击页面的Alter弹出框的确定按钮
+  click Alter Accetp:
+    control_script: 'Watir::Wait.until {clickAlterAccetp(@naboss_page)}'
+
+  #点击页面的Alter弹出框的取消按钮
+  click Alter Dismiss:
+    control_script: 'Watir::Wait.until {clickAlterDismiss(@naboss_page)}'
+
+  #提交工单业务受理
+  sumbit trade normal:
+    control_script: 'clickTradeSubmit(@naboss_page)'
+
+  #获取订单编号
+  get order_id normal:
+    control_script: '
+    Watir::Wait.until {@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).div(:id,"SUBMIT_MSG_PANEL")};
+    @orderStr=@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"SUBMIT_MSG_PANEL").div(:class,"c_popupWrapper").div(:class,"c_popupBox").div(:class,"c_popupContent").div(:class,"c_popupContentWrapper").div(:class,"c_msg c_msg-popup c_msg-success").div(:class,"content").text;
+    step["step_print"]=@orderStr;
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"SUBMIT_MSG_PANEL").button.click
+    '
+    expectation: '@orderStr!=nil'
+
+  #校验订单
+  check order:
+    control_script: '@order_id=check_order;puts @order_id'
+    expectation: '@result=="9"'
+
+  #截图
+  screenshort:
+    control_script: screenshort
+

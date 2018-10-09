@@ -1,0 +1,6 @@
+---
+2017-05-17_114509:
+- BillFeatures | SMS_FreeRes_notExist | 清单级优惠_短信_无免费资源可用
+- BillFeatures | Voice_FreeRes_notExist | 清单级优惠_语音_无免费资源可用
+- BillFeatures | GPRS_FreeRes_notExist | 清单级优惠_GPRS_无免费资源可用
+- BillFeatures | MIS_FreeRes_Exist | 清单级优惠_MISC

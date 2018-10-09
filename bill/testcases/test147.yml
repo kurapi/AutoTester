@@ -1,0 +1,21 @@
+---
+test147:
+  - PersonFeatures | ChanPinBianGeng_DingGouLaiDianXianShi | 产品变更_订购来电显示
+  - PersonFeatures | ChanPinBianGeng_TuiDingLaiDianXianShi | 产品变更_退订来电显示
+  - PersonFeatures | ChanPinBianGeng_DingGouIPChangLiao | 产品变更_订购IP长聊
+  - PersonFeatures | ChanPinBianGeng_TuiDingIPChangLiao | 产品变更_退订IP长聊
+  - PersonFeatures | GPRS_YouHuiBianGeng | GPRS优惠变更
+  - GroupFeatures | JiTuanZhangHuXinZeng | 集团账户新增
+  - GroupFeatures | JiTuanChanPinXinZeng_CaiLing | 集团产品新增_彩铃
+  - GroupFeatures | JiTuanChanPinChengYuanXinZeng_CaiLing | 集团产品成员新增_彩铃
+  - GroupFeatures | JiTuanChanPinChengYuanZiLiaoXiuGai_CaiLing | 集团产品成员资料修改_彩铃
+  - GroupFeatures | JiTuanChengYuanFuFeiGuanXiBianGeng_CaiLing | 集团成员付费关系变更_彩铃
+  - GroupFeatures | ZiVPMNJiTuanXinZeng | 子VPMN集团新增
+  - GroupFeatures | ZiVPMNJiTuanZhuXiao | 子VPMN集团注销
+  - GroupFeatures | MuVPMNWaiWangHaoMaXinZeng | 母VPMN网外号码新增
+  - GroupFeatures | MuVPMNWaiWangHaoMaZhuXiao | 母VPMN网外号码注销
+  - GroupFeatures | JiTuanChanPinFuFeiGuanXiXiuGai_CaiLing | 集团产品付费关系修改_彩铃
+  - GroupFeatures | JiTuanChanPinZiLiaoXiuGai_CaiLing | 集团产品资料修改_彩铃
+  - GroupFeatures | JiTuanChanPinZhuXiao_CaiLing | 集团产品注销_彩铃
+
+

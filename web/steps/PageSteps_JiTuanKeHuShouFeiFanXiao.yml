@@ -1,0 +1,36 @@
+PageSteps_JiTuanKeHuShouFeiFanXiao:
+  click link JiTuanKeHuShouFeiFanXiao:
+    control_script: '@naboss_page.link(:id,"BIL1202").click'
+
+  set text_field.cond_GROUP_ID value with JiTuanKeHuShouFeiFanXiao.GROUP_ID:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.GroupId'
+    control_data: config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.GroupId
+
+  click button.cond_queryButt:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+
+  click checkbox.T_Table.1.0 where velue like JiTuanXianJinFaPiaoDaYin_Acct_id:
+    control_script: '
+    	@a=@naboss_page.iframe(:id => /navframe/, :index => 1).iframe(:id => /wade_popup_frame_UserSelector/).table(:id,"T_Table");
+    	for @i in 0..60 do
+    		if @a.[](@i).[](0).text == (config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id).to_s then
+    			break;
+    		else
+    			if @i==60 then
+    				config.TestEnvParam.JiTuanPuTongFaPiaoZuoFei.SerialNumber.should ==0;
+    				puts "提供账户编码"+(config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id).to_s+"在表记录中不存在";
+    			end
+    		end;
+    	end;
+    	@a.[](@i).[](0).a.click;
+    '
+    control_data: config.TestEnvParam.JiTuanKeHuShouFei_YinGaiZeng.Acct_id
+
+  set checkbox.T_Table.1.0:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"payLogTable").[](1).[](0).click'
+
+  set text_field.CANCEL_REMARK value test:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"CANCEL_REMARK").select "营业员操作错误"'
+
+  click button.bSubmit:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"bSubmit").click'

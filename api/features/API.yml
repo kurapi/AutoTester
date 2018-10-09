@@ -1,0 +1,15 @@
+---
+API:
+  ITF_CCHT_SendSMS:
+    - BCM2007_THT1221 | Scenario1_quanqiutong
+    - BCM2007_THT1221 | Scenario2_shenzhouxing
+    - BCM2007_THT1221 | Scenario3_dinggandidai
+  SS.UserInfoQrySVC.checkUserStateBySerialNumber:
+    - BCS4165_THQ3083 | Scenario1_quanqiutong
+
+
+
+
+
+
+

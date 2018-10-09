@@ -1,0 +1,37 @@
+---
+TestEnvParam:
+  URL: http://10.200.130.85:7016/uip_inws/services/UIPSOAP?wsdl
+  ITF_CCHT_SendSMS: <SvcInfo><Header><Security><SEQID index="0" value="E0022016032811272100000001"
+    /><DESPWD index="0" value="7d05bd542beaaecf0eb40cbf15d6bdcf" /></Security><System><COMMUNICATE
+    index="0" value="02" /><TRANSFER index="0" value="01" /><CONTACTID index="0" value="003200903120000"
+    /><BUSSID index="0" value="E002A002201603281127210000000001" /><ORGCHANNELID index="0"
+    value="E002" /><HOMECHANNELID index="0" value="A002" /></System><ACTIONCODE index="0"
+    value="0" /><TESTFLAG index="0" value="0" /><Inparam><PROVINCE_CODE index="0"
+    value="HAIN" /><IN_MODE_CODE index="0" value="2" /><TRADE_EPARCHY_CODE index="0"
+    value="0898" /><ROUTE_EPARCHY_CODE index="0" value="0898" /><TRADE_CITY_CODE index="0"
+    value="HNSJ" /><TRADE_DEPART_ID index="0" value="00316" /><TRADE_STAFF_ID index="0"
+    value="SUPERUSR" /><STAFF_PASSWD index="0" value="123456" /><TRADE_DEPART_PASSWD
+    index="0" value="0123456789" /><CHANNEL_TRADE_ID index="0" value="E00320090401165020000000000000"
+    /><TRADE_TERMINAL_ID index="0" value="192.168.1.163" /><TRADE_ROUTE_TYPE  index="0"
+    value="00" /><TRADE_ROUTE_VALUE  index="0" value="0898" /><BIZ_CODE index="0"
+    value="BCM2007" /><TRANS_CODE index="0" value="THT1221" /><TRADE_BRAND_CODE index="0"
+    value="G010" /></Inparam><InFields><InField><INFO_CODE /><INFO_VALUE/></InField></InFields></Header><Body><SVC_CONTENT>{EPARCHY_CODE=["0898"],
+    RECV_OBJECT=["18289501414"], NOTICE_CONTENT=["尊敬的客户，您好！欢迎您到中国移动售后服务网点办理售后业务，您的售后需求已经成功受理，售后进度我们将通过短信及时通知您，请您留意并保管好受理单据。谢谢。"],
+    REFER_STAFF_ID=[""], REFER_DEPART_ID=[""], IN_MODE_CODE=[""], FORCE_OBJECT=["10086777"],
+    FORCE_START_TIME=["2016-04-19 09:50:24"]}</SVC_CONTENT></Body></SvcInfo>
+  checkUserStateBySerialNumber: <SvcInfo><Header><Security><SEQID index="0" value="E0022014110411444100000000"/><DESPWD
+    index="0" value="7d05bd542beaaecf0eb40cbf15d6bdcf"/></Security><System><COMMUNICATE
+    index="0" value="02"/><TRANSFER index="0" value="01"/><CONTACTID index="0" value="003200903120000"/><BUSSID
+    index="0" value="E002A002201411041144410000000000"/><ORGCHANNELID index="0" value="E002"/><HOMECHANNELID
+    index="0" value="A002"/></System><ACTIONCODE index="0" value="0"/><TESTFLAG index="0"
+    value="0"/><Inparam><PROVINCE_CODE index="0" value="HAIN"/><IN_MODE_CODE index="0"
+    value="5"/><TRADE_EPARCHY_CODE index="0" value="0898"/><ROUTE_EPARCHY_CODE index="0"
+    value="0898"/><TRADE_CITY_CODE index="0" value="HNSJ"/><TRADE_DEPART_ID index="0"
+    value="00316"/><TRADE_STAFF_ID index="0" value="ITFSM000"/><STAFF_PASSWD index="0"
+    value="123456"/><TRADE_DEPART_PASSWD index="0" value="0123456789"/><CHANNEL_TRADE_ID
+    index="0" value="E00320090401165020000000000000"/><TRADE_TERMINAL_ID index="0"
+    value="192.168.1.163"/><TRADE_ROUTE_TYPE index="0" value="00"/><TRADE_ROUTE_VALUE
+    index="0" value="0898"/><BIZ_CODE index="0" value="BCS4165"/><TRANS_CODE index="0"
+    value="THQ3083"/><TRADE_BRAND_CODE index="0" value="G001"/></Inparam><InFields><InField><INFO_CODE/><INFO_VALUE/></InField></InFields></Header><Body><SVC_CONTENT>{SERIAL_NUMBER=["18289546882"]}</SVC_CONTENT></Body>
+    </SvcInfo>
+  Description: 环境参数

@@ -1,0 +1,11 @@
+PageSteps_ZiVPMNJiTuanZhuXiao:
+  #点击子VPMN集团新增
+  click link ZiVPMNJiTuanXinZeng:
+    control_script: '@naboss_page.link(:id,"crm82A2").click'
+
+  set text_field.cond_SERIAL_NUMBER value ZiVPMNJiTuanZhuXiao_cond_SerialNumber and send enterKey:
+    control_script: '
+    @naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"queryForm").text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.ZiVPMNJiTuanZhuXiao.cond_SERIAL_NUMBER;
+    @naboss_page.send_keys :enter;
+    '
+    control_data: config.TestEnvParam.ZiVPMNJiTuanZhuXiao.cond_SERIAL_NUMBER

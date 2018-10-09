@@ -1,0 +1,31 @@
+PageSteps_JiaoFeiShouFeiChaXun:
+  click link JiaoFeiShouFeiChaXun:
+    control_script: '@naboss_page.link(:id,"BIL1502").click'
+
+  set text_field.serial_number value JiaoFeiShouFeiChaXun_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.JiaoFeiShouFeiChaXun.SerialNumber'
+    control_data: config.TestEnvParam.JiaoFeiShouFeiChaXun.SerialNumber
+
+  set cond_START_DATE is today:
+    control_script: '
+    	a=@naboss_page.iframe(:id => /navframe/, :index => 1);
+    	Watir::Wait.until{a.element(:id,"cond_BEGIN_TIME").exist?};
+    	a.element(:id,"cond_BEGIN_TIME").click;
+    	Watir::Wait.until{a.button(:id,"wade_drop_calendar_today_btn").exist?};
+    	a.button(:id,"wade_drop_calendar_today_btn").click;
+    '
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+
+  table.payLogTable should exist:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"payLogTable").[](1).[](3).click'
+    expectation: '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"payLogTable").[](1).[](3).text==(config.TestEnvParam.JiaoFeiShouFeiChaXun.SerialNumber).to_s'
+
+  table.T_TableT_1 should exist:
+    control_script: ';'
+    expectation: '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"T_TableT_1").[](1).[](0).text=="应缴金额"'
+
+  table.access should exist:
+    control_script: ';'
+    expectation: '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"access").[](1).[](0).exist?'

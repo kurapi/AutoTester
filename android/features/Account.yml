@@ -1,0 +1,30 @@
+---
+AccountFeatures:
+  login with valid test account:
+    - AccountSteps | enter My Account page
+    - AccountSteps | enter Login page
+    - AccountSteps | input test EmailAddress
+    - AccountSteps | input test Password
+    - AccountSteps | login
+    - AccountSteps | close coupon popup window(optional)
+
+  login with valid production account:
+    - AccountSteps | enter My Account page
+    - AccountSteps | enter Login page
+    - AccountSteps | input production EmailAddress
+    - AccountSteps | input production Password
+    - AccountSteps | login
+    - AccountSteps | close coupon popup window(optional)
+
+  logout:
+    - AccountSteps | enter My Account page
+    - SettingsSteps | enter Settings page
+    - AccountSteps | logout
+
+  Change Shipping Address to China:
+    - AccountSteps | enter My Account page
+    - SettingsSteps | enter ShoppingInfo page
+    - SettingsSteps | enter ShippingAddress page
+    - SettingsSteps | switch Shipping Address to China
+    - SettingsSteps | confirm Shipping Address selection
+    - SettingsSteps | back to last page

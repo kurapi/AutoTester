@@ -1,0 +1,24 @@
+PageSteps_XinBanYongHuZhangDanDaYin:
+  click link XinBanYongHuZhangDanDaYin:
+    control_script: '@naboss_page.link(:id,"BIL1540").click'
+
+  set text_field.serial_number value XinBanYongHuZhangDanDaYin_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.XinBanYongHuZhangDanDaYin.SerialNumber'
+    control_data: config.TestEnvParam.XinBanYongHuZhangDanDaYin.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+
+  click table.userBillTable:
+    control_script: '
+    Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"userBillTable").[](1).[](7).exist?};
+    @naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"userBillTable").[](1).[](7).click;
+    '
+
+  table.accountbillTable should exist:
+    control_script: ';'
+    expectation:  '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"accountbillTable").[](1).[](1).text ==  "上帐期末余额"'
+
+  table.discntbillTable should exist:
+    control_script: ';'
+    expectation:  '@naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"discntbillTable").[](1).[](0).exist?'

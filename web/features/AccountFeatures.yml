@@ -1,0 +1,222 @@
+---
+AccountFeatures:
+  HuaFeiShouQu_TanCeZhuanYong:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link ChargeManagement
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | click link HuaFeiShouQu_TanCeZhuanYong
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | set text_field.serial_number value huafeishouqu_serial_number
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | click button.check_serial_number
+    #- UserSteps | click Alter Dismiss
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | check Page_HuaFeiShouQu_TangTanZhuanYong account balance is 0
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | collect 10 yuan
+    - UserSteps | click Alter Accetp
+    - UserSteps | click Alter Accetp
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | set text_field.serial_number value huafeishouqu_serial_number
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | click button.check_serial_number
+    #- UserSteps | click Alter Dismiss
+    - PageSteps_HuaFeiShouQu_TangTanZhuanYong | check account_banlance is 10
+    - UserSteps | screenshort
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountQuery
+    - PageSteps_CunQuKuanRiZhiChaXun | click link CunQuKuanRiZhiChaXun
+    - PageSteps_CunQuKuanRiZhiChaXun | set text_field.serial_number value huafeishouqu_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | set cond_START_DATE is today
+    - PageSteps_CunQuKuanRiZhiChaXun | click button.check_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | check Charge_Log is 10
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  GeRenXianJinFaPiaoDaYin:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link BillManagement
+    - PageSteps_GeRenXianJinFaPiaoDaYin | click link GeRenXianJinFaPiaoDaYin
+    - PageSteps_GeRenXianJinFaPiaoDaYin | set text_field.serial_number value GeRenXianJinFaPiaoDaYin_serial_number
+    - PageSteps_GeRenXianJinFaPiaoDaYin | select select_list.cond_START_MONTH value with GeRenXianJinFaPiaoDaYin_print_day
+    - PageSteps_GeRenXianJinFaPiaoDaYin | click button.check_serial_number
+    - PageSteps_GeRenXianJinFaPiaoDaYin | set checkbox.T_Table.1.0
+    - PageSteps_GeRenXianJinFaPiaoDaYin | set text_field.cond_REMARK value with test
+    - PageSteps_GeRenXianJinFaPiaoDaYin | click button.beforePrint
+    - PageSteps_GeRenXianJinFaPiaoDaYin | set text_field._EnterPass_USER_PASS value with GeRenXianJinFaPiaoDaYin_Password
+    - PageSteps_GeRenXianJinFaPiaoDaYin | click button.OK
+    - PageSteps_GeRenXianJinFaPiaoDaYin | click button.DianZiFaPiaoDaYin
+    - UserSteps | click Alter Accetp
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+
+  GeRenPuTongFaPiaoZuoFei:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link BillManagement
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | click link GeRenPuTongFaPiaoZuoFei
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | set text_field.serial_number value GeRenXianJinFaPiaoDaYin_serial_number
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | click button.check_serial_number
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | click button.beforeCancel
+    - UserSteps | click Alter Accetp
+    - UserSteps | click Alter Accetps
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  HuaFeiFanXiao:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link ChargeManagement
+    - PageSteps_HuaFeiFanXiao | click link HuaFeiFanXiao
+    - PageSteps_HuaFeiFanXiao | set text_field.serial_number value HuaFeiFanXiao_serial_number
+    - PageSteps_HuaFeiFanXiao | click button.check_serial_number
+    - PageSteps_HuaFeiFanXiao | set text_field.CANCEL_REMARK value test
+    - PageSteps_HuaFeiFanXiao | click button.cancelButt
+    - UserSteps | click Alter Accetp
+    - UserSteps | click Alter Accetp
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountQuery
+    - PageSteps_CunQuKuanRiZhiChaXun | click link CunQuKuanRiZhiChaXun
+    - PageSteps_CunQuKuanRiZhiChaXun | set text_field.serial_number value HuaFeiFanXiao_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | set cond_START_DATE is today
+    - PageSteps_CunQuKuanRiZhiChaXun | click button.check_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | check Charge_Log is 0
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  JiTuanKeHuShouFei_YinGaiZeng:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountingGroup
+    - PageSteps_JiTuanKeHuShouFei_YinGaiZeng | click link JiTuanKeHuShouFei_YinGaiZeng
+    - PageSteps_JiTuanKeHuShouFei_YinGaiZeng | set text_field.cond_GROUP_ID value with JiTuanKeHuShouFei_YinGaiZeng.serial_number
+    - PageSteps_JiTuanKeHuShouFei_YinGaiZeng | click button.queryButt
+    - PageSteps_JiTuanKeHuShouFei_YinGaiZeng | set checkbox where text like JiTuanKeHuShouFei_YinGaiZeng.acct_id And collect 10 yuan
+    - PageSteps_JiTuanKeHuShouFei_YinGaiZeng | click button.submitButt
+    - UserSteps | click Alter Accetp
+    - UserSteps | click Alter Accetp
+    - UserSteps | click Alter Accetp
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountQuery
+    - PageSteps_CunQuKuanRiZhiChaXun | click link CunQuKuanRiZhiChaXun
+    - PageSteps_CunQuKuanRiZhiChaXun | set text_field.serial_number value JiTuanKeHuShouFei_YinGaiZeng_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | set cond_START_DATE is today
+    - PageSteps_CunQuKuanRiZhiChaXun | click button.check_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | check Charge_Log is 10
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  JiTuanXianJinFaPiaoDaYin:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link BillManagement
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | click link JiTuanXianJinFaPiaoDaYin
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | set text_field.serial_number value JiTuanXianJinFaPiaoDaYin_serial_number
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | select select_list.cond_START_MONTH value with JiTuanXianJinFaPiaoDaYin_print_day
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | click button.cond_queryButt
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | click checkbox.T_Table.1.0 where velue like JiTuanXianJinFaPiaoDaYin_Acct_id
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | set checkbox.T_Table.1.0
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | set text_field.cond_REMARK value with test
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | click button.beforePrint
+    - PageSteps_JiTuanXianJinFaPiaoDaYin | click button.DianZiFaPiaoDaYin
+    - UserSteps | click Alter Accetp
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  JiTuanPuTongFaPiaoZuoFei:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link BillManagement
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | click link GeRenPuTongFaPiaoZuoFei
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | set text_field.serial_number value JiTuanPuTongFaPiaoZuoFei_serial_number
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | click button.check_serial_number
+    - PageSteps_PuTongJiDaFaPiaoZuoFei | click button.beforeCancel
+    - UserSteps | click Alter Accetp
+    - UserSteps | click Alter Accetps
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  JiTuanKeHuShouFeiFanXiao:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountingGroup
+    - PageSteps_JiTuanKeHuShouFeiFanXiao | click link JiTuanKeHuShouFeiFanXiao
+    - PageSteps_JiTuanKeHuShouFeiFanXiao | set text_field.cond_GROUP_ID value with JiTuanKeHuShouFeiFanXiao.GROUP_ID
+    - PageSteps_JiTuanKeHuShouFeiFanXiao | click button.cond_queryButt
+    - PageSteps_JiTuanKeHuShouFeiFanXiao | click checkbox.T_Table.1.0 where velue like JiTuanXianJinFaPiaoDaYin_Acct_id
+    - PageSteps_JiTuanKeHuShouFeiFanXiao | set checkbox.T_Table.1.0
+    - PageSteps_JiTuanKeHuShouFeiFanXiao | set text_field.CANCEL_REMARK value test
+    - PageSteps_JiTuanKeHuShouFeiFanXiao | click button.bSubmit
+    - UserSteps | click Alter Accetp
+    - UserSteps | click Alter Accetp
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountQuery
+    - PageSteps_CunQuKuanRiZhiChaXun | click link CunQuKuanRiZhiChaXun
+    - PageSteps_CunQuKuanRiZhiChaXun | set text_field.serial_number value HuaFeiFanXiao_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | set cond_START_DATE is today
+    - PageSteps_CunQuKuanRiZhiChaXun | click button.check_serial_number
+    - PageSteps_CunQuKuanRiZhiChaXun | check Charge_Log is 0
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  JiaoFeiShouFeiChaXun:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountingQuery
+    - PageSteps_JiaoFeiShouFeiChaXun | click link JiaoFeiShouFeiChaXun
+    - PageSteps_JiaoFeiShouFeiChaXun | set text_field.serial_number value JiaoFeiShouFeiChaXun_serial_number
+    - PageSteps_JiaoFeiShouFeiChaXun | set cond_START_DATE is today
+    - PageSteps_JiaoFeiShouFeiChaXun | click button.check_serial_number
+    - PageSteps_JiaoFeiShouFeiChaXun | table.payLogTable should exist
+    - PageSteps_JiaoFeiShouFeiChaXun | table.T_TableT_1 should exist
+    - PageSteps_JiaoFeiShouFeiChaXun | table.access should exist
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  YongHuTaoCanShiYongLiangChaXun:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link AccountingQuery
+    - PageSteps_YongHuTaoCanShiYongLiangChaXun | click link YongHuTaoCanShiYongLiangChaXun
+    - PageSteps_YongHuTaoCanShiYongLiangChaXun | set text_field.serial_number value YongHuTaoCanShiYongLiangChaXun_serial_number
+    - PageSteps_YongHuTaoCanShiYongLiangChaXun | click button.check_serial_number
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  XinBanYongHuZhangDanDaYin:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link BillManagement
+    - PageSteps_XinBanYongHuZhangDanDaYin | click link XinBanYongHuZhangDanDaYin
+    - PageSteps_XinBanYongHuZhangDanDaYin | set text_field.serial_number value XinBanYongHuZhangDanDaYin_serial_number
+    - PageSteps_XinBanYongHuZhangDanDaYin | click button.check_serial_number
+    - PageSteps_XinBanYongHuZhangDanDaYin | click table.userBillTable
+    - PageSteps_XinBanYongHuZhangDanDaYin | table.accountbillTable should exist
+    - PageSteps_XinBanYongHuZhangDanDaYin | table.discntbillTable should exist
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+  XiangDanChaXun:
+    - UserSteps | change workspace AccountPage
+    - UserSteps | click link AccountingManagement
+    - UserSteps | click link ListQuery
+    - PageSteps_XiangDanChaXun | click link XiangDanChaXun
+    - PageSteps_XiangDanChaXun | set text_field.serial_number value XiangDanChaXun_serial_number
+    - PageSteps_XiangDanChaXun | click button.check_serial_number
+    - PageSteps_XiangDanChaXun | check password
+    - PageSteps_XiangDanChaXun | table.Voice_BILL_Summary should exist
+    - UserSteps | change workspace CRMPage
+    - SettingsSteps | clean test env
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

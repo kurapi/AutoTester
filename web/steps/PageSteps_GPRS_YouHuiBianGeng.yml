@@ -1,0 +1,20 @@
+PageSteps_GPRS_YouHuiBianGeng:
+  click link GPRS_YouHuiBianGeng:
+    control_script: '@naboss_page.link(:id,"crm925A").click'
+
+  set text_field.serial_number value GPRS_YouHuiBianGeng _serial_number:
+    control_script: '@naboss_page.div(:id,"main_ct").iframe(:id => /navframe/, :index => 1).text_field(:id,"AUTH_SERIAL_NUMBER").set config.TestEnvParam.GPRS_YouHuiBianGeng.SerialNumber'
+    control_data: config.TestEnvParam.GPRS_YouHuiBianGeng.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AUTH_SUBMIT_BTN").click'
+
+  change GPRS discnt:
+    control_script: '
+      if  @naboss_page.iframe(:id => /navframe/, :index => 1).table(:id,"SubTable").[](1).[](1).text != "MO手机上网套餐" then
+        @naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"DISCNT_CODE").select "MO手机上网套餐";
+      else
+        @naboss_page.iframe(:id => /navframe/, :index => 1).select_list(:id,"DISCNT_CODE").select "移动数据流量标准套餐";
+      end
+    '
+

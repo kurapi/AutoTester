@@ -1,0 +1,30 @@
+PageSteps_HuaFeiShouQu_TangTanZhuanYong:
+  #点击报开菜单按钮
+  click link HuaFeiShouQu_TanCeZhuanYong:
+    control_script: '@naboss_page.link(:id,"BIL1115").click'
+
+  set text_field.serial_number value huafeishouqu_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"cond_SERIAL_NUMBER").set config.TestEnvParam.HuaFeiShouQu_TangTanZhuanYong.SerialNumber'
+    data: config.TestEnvParam.HuaFeiShouQu_TangTanZhuanYong.SerialNumber
+
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"cond_queryButt").click'
+
+  check Page_HuaFeiShouQu_TangTanZhuanYong account balance is 0:
+    control_script: '
+       Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"AcctInfoShowPart").span(:text,"往月欠费：").parent().span(:class,"text").text.to_s == "0.00"};
+       @count=@naboss_page.iframe(:id => /navframe/, :index => 1).span(:text,"帐户总余额：").parent().span(:class,"text").text;
+    '
+
+  collect 10 yuan:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"SubmitPart").button(:text,"快速缴费10元").click'
+
+  check account_banlance is 10:
+    control_script: '
+       Watir::Wait.until{@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"AcctInfoShowPart").span(:text,"帐户总余额：").parent().span(:class,"text").text.to_s.length>0};
+    	@count2=@naboss_page.iframe(:id => /navframe/, :index => 1).div(:id,"AcctInfoShowPart").span(:text,"帐户总余额：").parent().span(:class,"text").text;
+    	@count2=@count2.to_f;
+    	if (@count2 - @count.to_f) != 10.0 then
+    		raise ArgumentError,"账户总余额不正确";
+    	end
+    '

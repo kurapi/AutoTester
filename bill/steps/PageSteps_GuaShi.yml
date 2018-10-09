@@ -1,0 +1,15 @@
+---
+PageSteps_GuaShi:
+  #点击报开菜单按钮
+  click link guashi:
+    control_script: '@naboss_page.link(:id,"crm9243").click'
+    control_recover: '@naboss_page.link(:id,"crm9243").click'
+
+  #在报开页面的服务号码文本框输入服务号码
+  set text_field.serial_number value guashi_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).text_field(:id,"AUTH_SERIAL_NUMBER").set config.TestEnvParam.GuaShi.SerialNumber'
+
+  #在报开页面点击查询按钮
+  click button.check_serial_number:
+    control_script: '@naboss_page.iframe(:id => /navframe/, :index => 1).button(:id,"AUTH_SUBMIT_BTN").click'
+    data: config.TestEnvParam.GuaShi.SerialNumber
